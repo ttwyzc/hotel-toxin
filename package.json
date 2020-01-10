@@ -1,0 +1,20 @@
+{
+  "name": "hotel-toxin",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "parcel src/pages/colors-n-types/colors-n-types.pug --open"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel-bundler": "^1.12.4",
+    "pug": "^2.0.4",
+    "sass": "^1.24.4"
+  },
+  "dependencies": {
+    "normalize.css": "^8.0.1"
+  }
+}

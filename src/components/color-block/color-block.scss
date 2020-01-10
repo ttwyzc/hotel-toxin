@@ -12,31 +12,31 @@
   font-style: normal;
   font-size: 19px;
   line-height: 29px;
-  color: $dark-shade-100;
+  color: $dark-100;
 }
 
 .color-block {
   display: flex;
   &__box {
-    &_dark-shade-100 {
+    &_dark-100 {
       @include color-box();
-      background: $dark-shade-100;
+      background: $dark-100;
     }
-    &_dark-shade-75 {
+    &_dark-50 {
       @include color-box();
-      background: $dark-shade-75;
+      background: $dark-50;
     }
-    &_dark-shade-50 {
+    &_dark-50 {
       @include color-box();
-      background: $dark-shade-50;
+      background: $dark-50;
     }
-    &_dark-shade-25 {
+    &_dark-25 {
       @include color-box();
-      background: $dark-shade-25;
+      background: $dark-25;
     }
-    &_dark-shade-5 {
+    &_dark-5 {
       @include color-box();
-      background: $dark-shade-5;
+      background: $dark-5;
     }
     &_purple {
       @include color-box();

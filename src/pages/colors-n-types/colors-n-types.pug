@@ -1,4 +1,11 @@
 extends ../base-minimal/base-minimal
+include ../../components/color-block/color-block
 
 block main
-  h1 hey world
+  +color-block('Dark Shade 100%', '#1F2041')(class="color-block__box_dark-shade-100 color-block__box_shadowed")
+  +color-block('Dark Shade 75%', '#1F2041')(class="color-block__box_dark-shade-75")
+  +color-block('Dark Shade 50%', '#1F2041')(class="color-block__box_dark-shade-50")
+  +color-block('Dark Shade 25%', '#1F2041')(class="color-block__box_dark-shade-25")
+  +color-block('Dark Shade 5%', '#1F2041')(class="color-block__box_dark-shade-5")
+  +color-block('Purple', '#BC9CFF')(class="color-block__box_green")
+  +color-block('Green', '#6FCF97')(class="color-block__box_purple")

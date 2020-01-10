@@ -1,4 +1,7 @@
-<!DOCTYPE html>
+include ../../components/header-minimal/header-minimal
+include ../../components/container/container
+
+doctype html
 html(lang="en")
   head
     meta(charset="UTF-8")
@@ -6,7 +9,8 @@ html(lang="en")
     meta(http-equiv="X-UA-Compatible", content="ie=edge")
     title Some funny title
   body 
-    
-    block main
+    +container()
+      +header-minimal()
+      block main
     
     script(src="../../entry.js")

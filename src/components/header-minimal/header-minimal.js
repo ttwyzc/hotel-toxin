@@ -1,0 +1,1 @@
+import './header-minimal.scss';

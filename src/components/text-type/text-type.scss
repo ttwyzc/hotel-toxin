@@ -1,0 +1,35 @@
+@import '~../../../../style/colors.scss';
+@mixin font-title {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  color: $dark-shade-25;
+}
+
+.text-type {
+  display: flex;
+  &__title {
+    font-size: 24px;
+    line-height: 29px;
+    &_H1 {
+      @include font-title;
+      font-size: 24px;
+      line-height: 29px;
+    }
+    &_H2 {
+      @include font-title;
+      font-size: 19px;
+      line-height: 23px;
+    }
+    &_H3 {
+      @include font-title;
+      font-size: 12px;
+      line-height: 15px;
+    }
+    &_Body {
+      @include font-title;
+      font-size: 14px;
+      line-height: 24px;
+    }
+  }
+}

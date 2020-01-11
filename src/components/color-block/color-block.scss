@@ -1,4 +1,4 @@
-@import '~../../../../style/colors.scss';
+@import '~src/style/colors.scss';
 
 @mixin color-box {
   border-radius: 6px;
@@ -17,14 +17,17 @@
 
 .color-block {
   display: flex;
+  flex-direction: row;
+  padding-left: 10px;
   &__box {
+    // margin: 35px 10px;
     &_dark-100 {
       @include color-box();
       background: $dark-100;
     }
-    &_dark-50 {
+    &_dark-75 {
       @include color-box();
-      background: $dark-50;
+      background: $dark-75;
     }
     &_dark-50 {
       @include color-box();
@@ -64,5 +67,12 @@
       @include color-text();
       font-weight: bold;
     }
+  }
+  &__row {
+    display: flex;
+    flex-direction: row;
+  }
+  &:first-of-type {
+    padding-top: 20px;
   }
 }

@@ -1,6 +1,7 @@
 mixin color-block(title, text)
   .color-block
-    .color-block__box(class!=attributes.class)
-    .color-block__label
-      .color-block__text_title #{title}
-      .color-block__text #{text}
+    .color-block__row
+      .color-block__box(class!=attributes.class)
+      .color-block__label
+        .color-block__text_title #{title}
+        .color-block__text #{text}

@@ -1,16 +1,20 @@
 extends ../base-minimal/base-minimal
 include ../../components/color-block/color-block
 include ../../components/text-type/text-type
+include ../../components/container/container
 
 block main
-  +color-block('Dark Shade 100%', '#1F2041')(class="color-block__box_dark-100 color-block__box_shadowed")
-  +color-block('Dark Shade 75%', '#1F2041')(class="color-block__box_dark-50")
-  +color-block('Dark Shade 50%', '#1F2041')(class="color-block__box_dark-50")
-  +color-block('Dark Shade 25%', '#1F2041')(class="color-block__box_dark-25")
-  +color-block('Dark Shade 5%', '#1F2041')(class="color-block__box_dark-5")
-  +color-block('Purple', '#BC9CFF')(class="color-block__box_green")
-  +color-block('Green', '#6FCF97')(class="color-block__box_purple")
-  +text-type('H1', '<h1>This one is the sub-section or widget title</h1>')
-  +text-type('H2', '<h2>Next one is the item title inside widgets</h2>')
-  +text-type('H3', '<h3>This one is the sub-section or widget title</h3>')
-  +text-type('Body', 'This one is the sub-section or widget title')
+  +container('row')
+    +container('column')
+      +color-block('Dark Shade 100%', '#1F2041')(class="color-block__box_dark-100 color-block__box_shadowed")
+      +color-block('Dark Shade 75%', '#1F2041')(class="color-block__box_dark-75")
+      +color-block('Dark Shade 50%', '#1F2041')(class="color-block__box_dark-50")
+      +color-block('Dark Shade 25%', '#1F2041')(class="color-block__box_dark-25")
+      +color-block('Dark Shade 5%', '#1F2041')(class="color-block__box_dark-5")
+      +color-block('Purple', '#BC9CFF')(class="color-block__box_purple")
+      +color-block('Green', '#6FCF97')(class="color-block__box_green")
+    +container('column')
+      +text-type('H1', '<h1>This one is the sub-section or widget title</h1>')
+      +text-type('H2', '<h2>Next one is the item title inside widgets</h2>')
+      +text-type('H3', '<h3>This is a label or CTA text</h3>')
+      +text-type('Body', 'This is the body text which is used for most of the design, like paragraphs, lists, etc.')

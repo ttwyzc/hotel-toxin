@@ -1,4 +1,19 @@
 .container {
-  max-width: 1440px;
-  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  &__column {
+    flex-direction: column;
+  }
+  &__row {
+    flex-direction: row;
+    // flex-wrap: wrap;
+  }
+  &__wrapper {
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+  &__content {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
 }

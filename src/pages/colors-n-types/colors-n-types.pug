@@ -1,13 +1,20 @@
 extends ../base-min/base-min
 include ../../components/wrapper/wrapper
+include ../../components/colors/colors
 
 
 block main
   +wrapper__content()
-    .wrapper__row
-      .wrapper__column
-        h1 Lorem, i
-        h1 safasfasfsafsafasfsa
-      .wrapper__column
+    .wrapper__row(class="wrapper__space-b")
+      +wrapper__column
+        .wrapper__color
+          +color('Dark Shade 100%', '#1F2041')(class="color__box_dark-100 color__box_shadowed")
+          +color('Dark Shade 75%', '#1F2041')(class="color__box_dark-75")
+          +color('Dark Shade 50%', '#1F2041')(class="color__box_dark-50")
+          +color('Dark Shade 25%', '#1F2041')(class="color__box_dark-25")
+          +color('Dark Shade 5%', '#1F2041')(class="color__box_dark-5")
+          +color('Purple', '#BC9CFF')(class="color__box_purple")
+          +color('Green', '#6FCF97')(class="color__box_green")
+      +wrapper__column
         h1 safsafasfa
         h1 sgfdsaghsdalfghsd

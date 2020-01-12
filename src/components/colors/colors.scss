@@ -1,0 +1,69 @@
+@import '~src/style/colors.scss';
+
+@mixin color-box {
+  border-radius: 6px;
+  height: 70px;
+  width: 70px;
+  margin: 10px;
+}
+
+@mixin color-text {
+  font-family: Quicksand;
+  font-style: normal;
+  font-size: 19px;
+  line-height: 29px;
+  color: $dark-100;
+}
+
+.color {
+  display: flex;
+  flex-direction: row;
+  &__box {
+    &_dark-100 {
+      @include color-box();
+      background: $dark-100;
+    }
+    &_dark-75 {
+      @include color-box();
+      background: $dark-75;
+    }
+    &_dark-50 {
+      @include color-box();
+      background: $dark-50;
+    }
+    &_dark-25 {
+      @include color-box();
+      background: $dark-25;
+    }
+    &_dark-5 {
+      @include color-box();
+      background: $dark-5;
+    }
+    &_purple {
+      @include color-box();
+      background: $purple;
+    }
+    &_green {
+      @include color-box();
+      background: $green;
+    }
+    &_shadowed {
+      @include color-box();
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+  }
+  &__label {
+    display: flex;
+    flex-direction: column;
+    margin-left: 30px;
+    justify-content: center;
+  }
+  &__text {
+    @include color-text();
+    font-weight: normal;
+    &_title {
+      @include color-text();
+      font-weight: bold;
+    }
+  }
+}

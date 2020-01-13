@@ -1,0 +1,42 @@
+@import '~src/style/colors.scss';
+@mixin font-title {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  color: $dark-25;
+}
+
+.text-type {
+  display: flex;
+  justify-content: start;
+  // padding-left: 90px;
+  align-items: baseline;
+  &__title {
+    flex-basis: 15%;
+    text-align: right;
+    padding-right: 30px;
+    &_H1 {
+      @include font-title;
+      font-size: 24px;
+      line-height: 29px;
+    }
+    &_H2 {
+      @include font-title;
+      font-size: 19px;
+      line-height: 23px;
+    }
+    &_H3 {
+      @include font-title;
+      font-size: 12px;
+      line-height: 15px;
+    }
+    &_Body {
+      @include font-title;
+      font-size: 14px;
+      line-height: 24px;
+    }
+  }
+  &__body{
+    flex: 0 1 340px;
+  }
+}

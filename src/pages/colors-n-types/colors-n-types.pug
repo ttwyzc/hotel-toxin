@@ -1,7 +1,7 @@
 extends ../base-min/base-min
 include ../../components/wrapper/wrapper
 include ../../components/colors/colors
-
+include ../../components/text-type/text-type
 
 block main
   +wrapper__content()
@@ -16,5 +16,7 @@ block main
           +color('Purple', '#BC9CFF')(class="color__box_purple")
           +color('Green', '#6FCF97')(class="color__box_green")
       +wrapper__column
-        h1 safsafasfa
-        h1 sgfdsaghsdalfghsd
+        +text-type('H1', '<h1>This one is the sub-section or widget title</h1>')
+        +text-type('H2', '<h2>Next one is the item title inside widgets</h2>')
+        +text-type('H3', '<h3>This is a label or CTA text</h3>')
+        +text-type('Body', 'This is the body text which is used for most of the design, like paragraphs, lists, etc.')

@@ -1,10 +1,9 @@
 extends ../base-min/base-min
 include ../../components/wrapper/wrapper
-
+include ../../components/button/button
 block main
   +wrapper__content()
-    label.label
-      h3 someshit
-      input(type="text" placeholder="Email" class="input__type_text")
-      input(type="password" placeholder="password" class="input__type_text")
-      input(type="date", name="")
+    +button('click me', 'cover')
+    +button('click me', 'bordered')
+    +button('click me', 'text')
+    +button('click me', 'text_grey')

@@ -5,3 +5,4 @@ import './components/wrapper/wrapper';
 import './components/colors/colors';
 import './components/text-type/text-type';
 import './components/button/button';
+import './components/input/input';

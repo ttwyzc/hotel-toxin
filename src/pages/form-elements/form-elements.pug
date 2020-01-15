@@ -1,9 +1,24 @@
 extends ../base-min/base-min
 include ../../components/wrapper/wrapper
 include ../../components/button/button
+include ../../components/input/input.pug
+
 block main
   +wrapper__content()
-    +button('click me', 'cover')
-    +button('click me', 'bordered')
-    +button('click me', 'text')
-    +button('click me', 'text_grey')
+    +wrapper__row()
+      +wrapper__column()
+        +wrapper__row()
+          +button('click me', 'cover')
+          +button('click me', 'bordered')
+        +wrapper__row()
+          +button('click me', 'text')
+          +button('click me', 'text_grey')
+        +input({
+          type: "text", 
+          label: "text field",
+          placeholder: "Email"
+          })
+        +input({
+          type: "password", 
+          placeholder: "Пароль"
+          })

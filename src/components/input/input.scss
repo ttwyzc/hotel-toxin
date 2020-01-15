@@ -1,0 +1,19 @@
+@import '~src/style/colors.scss';
+
+input {
+  outline: none;
+  &:hover, &:focus {
+    background: #FFFFFF;
+    border: 1px solid $dark-50;
+    box-sizing: border-box;
+    border-radius: 4px;
+  }
+}
+.input {
+  &__element {
+    border: 1px solid rgba(31, 32, 65, 0.25);
+    box-sizing: border-box;
+    border-radius: 4px;
+    padding: 15px 13px;
+  }
+}

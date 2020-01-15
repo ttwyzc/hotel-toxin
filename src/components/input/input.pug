@@ -1,0 +1,16 @@
+mixin input(props)
+  if (props.type === "text" || props.type === "password")
+    if props.label
+      label.input__label 
+        h3 #{props.label}
+        input.input__element(
+          type=props.type
+          placeholder=props.placeholder
+        )
+    else 
+      input.input__element(
+      type=props.type
+      placeholder=props.placeholder
+      )
+  else
+    p Not now

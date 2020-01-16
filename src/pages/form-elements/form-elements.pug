@@ -8,17 +8,26 @@ block main
     +wrapper__row()
       +wrapper__column()
         +wrapper__row()
-          +button('click me', 'cover')
-          +button('click me', 'bordered')
+          +button({theme: 'cover', text: 'click me'})
+          +button({theme: 'border', text: 'click me'})
         +wrapper__row()
-          +button('click me', 'text')
-          +button('click me', 'text_grey')
+          +button({theme: 'text', text: 'click me', color: 'purple'})
+          +button({theme: 'text', text: 'click me', color: 'grey'})
+        +button({theme: 'cover'})
         +input({
           type: "text", 
           label: "text field",
-          placeholder: "Email"
+          placeholder: "Email",
+          title: "text input"
+          })
+        +input({
+          type: "text", 
+          label: "text field",
+          placeholder: "Email",
+          add_class: "date"
           })
         +input({
           type: "password", 
           placeholder: "Пароль"
           })
+        input(type="text" class="date" placeholder="13.01.2019")

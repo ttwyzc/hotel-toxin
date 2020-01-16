@@ -1,2 +1,17 @@
-mixin button(text, style)
-  button.button(class="button__"+style) #{text}
+//-
+  props.theme - тип (border, cover, text)
+  props.text - текст ('string')
+  props.color - цвет текста для type: 'thene' (grey, purple)
+  +button({
+    theme: 'text', 
+    text: 'click me', 
+    color: 'purple'
+    })
+
+mixin button(props = {})
+  -
+    var classes = ''
+    classes += props.theme ? ' button__theme-' + props.theme : ''
+    classes += props.color ? ' button__theme-text_' + props.color : ''
+  
+  button.button(class=classes)= props.text || 'Button'

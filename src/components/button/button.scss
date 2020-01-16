@@ -1,6 +1,8 @@
+@import '~src/style/colors.scss';
+
 .button {
   border: none;
-  color: #BC9CFF;
+  background: none;
   font-family: Montserrat;
   font-weight: bold;
   font-size: 12px;
@@ -11,25 +13,28 @@
   &:hover {
     opacity: 0.5;
   }
-  &__bordered {
+  &__theme-border {
     border: solid 2px transparent;
     border-radius: 22px;
     background-image: linear-gradient(white, white), linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
     background-origin: border-box;
     background-clip: padding-box, border-box;
+    color: $purple;
     padding: 13px 17px;
   }
-  &__cover {
+  &__theme-cover {
     padding: 15px 19px;
-   background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-   border-radius: 22px;
-   color: white;
+    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+    border-radius: 22px;
+    color: white;
   }
-  &__text {
+  &__theme-text {
     background: none;
-  }
-  &__text_grey {
-    background: none;
-    color: rgba(31, 32, 65, 0.5);
+    &_grey {
+      color: $dark-50;
+    }
+    &_purple{
+      color: $purple;
+    }
   }
 }

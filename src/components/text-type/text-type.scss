@@ -8,11 +8,10 @@
 
 .text-type {
   display: flex;
-  justify-content: start;
-  // padding-left: 90px;
+  flex: 0 0 10%;
   align-items: baseline;
   &__title {
-    flex-basis: 15%;
+    flex-basis: 10%;
     text-align: right;
     padding-right: 30px;
     &_H1 {
@@ -35,8 +34,13 @@
       font-size: 14px;
       line-height: 24px;
     }
+    &_Body:first {
+      padding-top: 34px;
+    }
   }
   &__body{
-    flex: 0 1 340px;
+    max-width: 340px;
+    text-align: left;
+    flex: 0 0 auto;
   }
 }

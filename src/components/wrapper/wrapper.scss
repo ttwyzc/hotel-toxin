@@ -17,22 +17,21 @@
 .flex {
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-between;
 }
 .colors {
-  padding-top: 30px;
-  padding-left: 10px;
+  padding-top: 1.875rem;
+  padding-left: .65rem;
 }
 .text-types {
   padding-top: 15px;
   padding-right: 50px;
 }
 
-.padding-t-20 {
-  padding-top: 20px;
-}
 .column {
   flex-direction: column;
+}
+.space-between {
+  justify-content: space-between;
 }
 
 // .flex-basis-400 {

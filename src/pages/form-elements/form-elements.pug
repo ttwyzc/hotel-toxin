@@ -4,30 +4,17 @@ include ../../components/button/button
 include ../../components/input/input.pug
 
 block main
-  +wrapper__content()
-    +wrapper__row()
-      +wrapper__column()
-        +wrapper__row()
-          +button({theme: 'cover', text: 'click me'})
-          +button({theme: 'border', text: 'click me'})
-        +wrapper__row()
-          +button({theme: 'text', text: 'click me', color: 'purple'})
-          +button({theme: 'text', text: 'click me', color: 'grey'})
-        +button({theme: 'cover'})
-        +input({
-          type: "text", 
-          label: "text field",
-          placeholder: "Email",
-          title: "text input"
-          })
-        +input({
-          type: "text", 
-          label: "text field",
-          placeholder: "Email",
-          add_class: "date"
-          })
-        +input({
-          type: "password", 
-          placeholder: "Пароль"
-          })
-        input(type="text" class="date" placeholder="13.01.2019")
+  .wrapper
+    .content
+      header.wrapper__header
+        .container
+          +header-min()
+      section.main
+        .container-inner
+          .flex
+            +button({
+              theme: 'text', 
+              text: 'click me', 
+              color: 'purple',
+              isLink: 'true'
+              })

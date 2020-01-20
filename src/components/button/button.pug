@@ -1,17 +1,23 @@
 //-
-  props.theme - тип (border, cover, text)
-  props.text - текст ('string')
-  props.color - цвет текста для type: 'thene' (grey, purple)
+  theme - тип (border, cover, text)
+  text - текст кнопки ('string')
+  color - цвет текста для type: 'thene' (grey, purple)
+  isLink - (true, false)
   +button({
     theme: 'text', 
     text: 'click me', 
-    color: 'purple'
+    color: 'purple',
+    isLink: 'true'
     })
 
-mixin button(props = {})
-  -
-    var classes = ''
-    classes += props.theme ? ' button__theme-' + props.theme : ''
-    classes += props.color ? ' button__theme-text_' + props.color : ''
+mixin button(options = {theme, color, isLink, text})
+  - 
+    const {theme='cover', color='', isLink='true', text='Button'} = options;
+
+    let classes = '';
+    classes += theme ? ' button__theme_' + theme : '';
+    classes += color ? ' button__theme_text_' + color : '';
+
+  - const tag = isLink ? 'a' : 'button';
   
-  button.button(class=classes)= props.text || 'Button'
+  #{tag}.button(class=classes)= text

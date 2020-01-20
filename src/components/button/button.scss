@@ -13,7 +13,7 @@
   &:hover {
     opacity: 0.5;
   }
-  &__theme-border {
+  &__theme_border {
     border: solid 2px transparent;
     border-radius: 22px;
     background-image: linear-gradient(white, white), linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
@@ -22,13 +22,13 @@
     color: $purple;
     padding: 13px 17px;
   }
-  &__theme-cover {
+  &__theme_cover {
     padding: 15px 19px;
     background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
     border-radius: 22px;
     color: white;
   }
-  &__theme-text {
+  &__theme_text {
     background: none;
     &_grey {
       color: $dark-50;

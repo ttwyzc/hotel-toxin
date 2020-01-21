@@ -14,13 +14,35 @@ block main
           .flex.space-between
             .colors
               .column
-                +color('Dark Shade 100%', '#1F2041')(class="color__box_dark-100 color__box_shadowed")
-                +color('Dark Shade 75%', '#1F2041')(class="color__box_dark-75")
-                +color('Dark Shade 50%', '#1F2041')(class="color__box_dark-50")
-                +color('Dark Shade 25%', '#1F2041')(class="color__box_dark-25")
-                +color('Dark Shade 5%', '#1F2041')(class="color__box_dark-5")
-                +color('Purple', '#BC9CFF')(class="color__box_purple")
-                +color('Green', '#6FCF97')(class="color__box_green")
+                +color({title: 'Dark Shade 100%',
+                  hex: '#1F2041',
+                  style: 'dark-100',
+                  isShadowed: true
+                  })
+                +color({title: 'Dark Shade 75%',
+                  hex: '#1F2041',
+                  style: 'dark-75',
+                  })
+                +color({title: 'Dark Shade 50%',
+                  hex: '#1F2041',
+                  style: 'dark-50',
+                  })
+                +color({title: 'Dark Shade 25%',
+                  hex: '#1F2041',
+                  style: 'dark-25',
+                  })
+                +color({title: 'Dark Shade 5%',
+                  hex: '#1F2041',
+                  style: 'dark-5',
+                  })
+                +color({title: 'Purple',
+                  hex: '#BC9CFF',
+                  style: 'purple',
+                  })
+                +color({title: 'Green',
+                  hex: '#6FCF97',
+                  style: 'green',
+                  })
             .text-types
               .column
                 +text-type('H1', '<h1>This one is the sub-section or widget title</h1>')

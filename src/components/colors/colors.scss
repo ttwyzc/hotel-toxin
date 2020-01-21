@@ -3,7 +3,7 @@
 .color {
   display: flex;
   flex-direction: row;
-  margin-bottom: 1.25rem;
+  margin-bottom: 2rem;
   &__box {
     border-radius: 6px;
     height: 70px;
@@ -36,13 +36,14 @@
   &__label {
     display: flex;
     flex-direction: column;
-    margin-left: 2.5rem;
+    margin-left: 4rem;
     justify-content: center;
+
   }
   &__text {
     font-family: Quicksand;
     font-style: normal;
-    font-size: 19px;
+    font-size: 1.9rem;
     line-height: 29px;
     color: $dark-100;
     font-weight: normal;

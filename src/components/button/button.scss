@@ -5,7 +5,7 @@
   background: none;
   font-family: Montserrat;
   font-weight: bold;
-  font-size: 12px;
+  font-size: 1.2rem;
   line-height: 15px;
   text-transform: uppercase;
   cursor: pointer;
@@ -20,10 +20,10 @@
     background-origin: border-box;
     background-clip: padding-box, border-box;
     color: $purple;
-    padding: 13px 17px;
+    padding: 1.3rem 1.7rem;
   }
   &__theme_cover {
-    padding: 15px 19px;
+    padding: 1.5rem 1.9rem;
     background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
     border-radius: 22px;
     color: white;

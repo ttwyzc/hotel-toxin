@@ -1,19 +1,30 @@
 @import '~src/style/colors.scss';
 
-input {
-  outline: none;
-  &:hover, &:focus {
-    background: #FFFFFF;
-    border: 1px solid $dark-50;
-    box-sizing: border-box;
-    border-radius: 4px;
-  }
-}
 .input {
-  &__element {
+  outline: none;
+  &__title {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;
+    color: $dark-100;
+    text-transform: uppercase;
+  }
+  &__elem {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 18px;
+    padding: 13px 15px;
+    background: #FFFFFF;
     border: 1px solid rgba(31, 32, 65, 0.25);
     box-sizing: border-box;
     border-radius: 4px;
-    padding: 15px 13px;
   }
 }
+.input__title, .input__elem {
+  display: block;
+  margin: 5px 0px;
+  } 

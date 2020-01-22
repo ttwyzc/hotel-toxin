@@ -11,10 +11,26 @@ block main
           +header-min()
       section.main
         .container-inner
-          .flex
+          .flex.column.align-start
+            +button({
+              theme: 'cover', 
+              text: 'click me', 
+              })
+            +button({
+              theme: 'border', 
+              text: 'click me', 
+              })
+            +button({
+              theme: 'text', 
+              text: 'click me', 
+              color: 'grey',
+              isLink: false
+              })
             +button({
               theme: 'text', 
               text: 'click me', 
               color: 'purple',
-              isLink: 'true'
+              isLink: false
               })
+            +input({type: 'text', title: 'text form', placeholder: 'Email'})
+            +input({type: 'text', title: 'text form', placeholder: 'Email'})

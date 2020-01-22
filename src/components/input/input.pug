@@ -1,16 +1,10 @@
-mixin input(props)
-  if (props.type === "text" || props.type === "password")
-    if props.label
-      label.input__label 
-        h3 #{props.label}
-        input.input__element(
-          type=props.type
-          placeholder=props.placeholder
-        )
-    else 
-      input.input__element(
-      type=props.type
-      placeholder=props.placeholder
-      )
-  else
-    p Not now
+mixin input(prop)
+
+	if prop.type === 'text' || prop.type === 'password' || prop.type === 'email' || prop.type === 'textarea' || prop.type === 'select' || prop.type === 'file'
+		.input
+			if prop.title
+				label.input__title() 
+					h3 #{prop.title}
+					input.input(class='input__elem ' placeholder=prop.placeholder type='text')
+			else
+				input.input(class='input__elem' type='text' )

@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "parcel src/pages/colors-n-types/colors-n-types.pug --open"
+    "dev1": "parcel src/pages/colors-n-types/colors-n-types.pug --open",
+    "dev": "parcel src/pages/form-elements/form-elements.pug --open"
   },
   "repository": {
     "type": "git",

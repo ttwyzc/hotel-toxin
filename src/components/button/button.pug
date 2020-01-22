@@ -12,7 +12,7 @@
 
 mixin button(prop = {theme, color, isLink, text})
   - 
-    const {theme='cover', color='', isLink='true', text='Button'} = prop;
+    const {theme='cover', color='', isLink=true, text='Button'} = prop;
 
     let classes = '';
     classes += theme ? ' button__theme_' + theme : '';

@@ -1,4 +1,4 @@
-@import '~src/style/colors.scss';
+@import 'src/style/variables.scss';
 
 .color {
   display: flex;
@@ -38,7 +38,6 @@
     flex-direction: column;
     margin-left: 4rem;
     justify-content: center;
-
   }
   &__text {
     font-family: Quicksand;

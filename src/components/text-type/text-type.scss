@@ -1,4 +1,4 @@
-@import '~src/style/colors.scss';
+@import 'src/style/variables.scss';
 @mixin font-title {
   font-family: Montserrat;
   font-style: normal;
@@ -36,7 +36,7 @@
       line-height: 24px;
     }
   }
-  &__body{
+  &__body {
     max-width: 340px;
     text-align: left;
     flex: 0 0 auto;

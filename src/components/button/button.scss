@@ -1,4 +1,4 @@
-@import '~src/style/colors.scss';
+@import 'src/style/variables.scss';
 
 .button {
   border: none;
@@ -16,7 +16,7 @@
   &__theme_border {
     border: solid 2px transparent;
     border-radius: 22px;
-    background-image: linear-gradient(white, white), linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+    background-image: linear-gradient(white, white), $primary-gradient;
     background-origin: border-box;
     background-clip: padding-box, border-box;
     color: $purple;
@@ -24,7 +24,7 @@
   }
   &__theme_cover {
     padding: 1.5rem 1.9rem;
-    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+    background: $primary-gradient;
     border-radius: 22px;
     color: white;
   }
@@ -33,7 +33,7 @@
     &_grey {
       color: $dark-50;
     }
-    &_purple{
+    &_purple {
       color: $purple;
     }
   }

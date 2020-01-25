@@ -1,0 +1,20 @@
+extends ../base-min/base-min
+include ../../components/header/header
+
+include ../../components/wrapper/wrapper
+include ../../components/colors/colors
+include ../../components/text-type/text-type
+
+block main
+  .wrapper.bg-grey
+    .content
+      header.wrapper__header1
+        .container
+          +header-min()
+      .ahrf 
+      section.main
+        header.wrapper__header
+          +header()
+        .saf  
+        header.wrapper__header
+          +header()

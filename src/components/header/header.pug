@@ -1,0 +1,31 @@
+include ../button/button
+
+mixin header()
+    .header
+      img(src="../../components/header/img/logo-full.svg", alt="").header__logo
+      .header__menu
+        ul.menu
+          li.menu__item
+            a(href="#" class="menu__link") home
+          li.menu__item
+            a(href="#" class="menu__link") home
+          li.menu__item
+            a(href="#" class="menu__link") home
+          li.menu__item
+            a(href="#" class="menu__link") home
+          li.menu__item
+            a(href="#" class="menu__link") home
+          li.menu__item
+            a(href="#" class="menu__link") home
+          li.menu__item
+            +button({
+              theme: 'border', 
+              text: 'Login', 
+              isLink: true
+              })
+          li.menu__item
+            +button({
+              theme: 'cover', 
+              text: 'Register', 
+              isLink: true
+              })

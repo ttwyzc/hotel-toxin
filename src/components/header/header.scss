@@ -9,27 +9,36 @@
     // remove gaps of img inside div
     line-height: 0;
   }
+  &__menu {
+    list-style-type: none;
+    display: flex;
+    align-items: baseline;
+  }
 }
 .menu {
-  list-style-type: none;
-  display: flex;
-  align-items: baseline;
   &__item {
     float: left;
     // display: block;
     color: white;
     text-align: center;
     // padding: 0 14px;
-    margin-left: 20px;
+    margin-left: 3rem;
     text-decoration: none;
   }
   &__link {
     font-family: Montserrat;
     font-style: normal;
     font-weight: normal;
-    font-size: 14px;
-    line-height: 17px;
     color: rgba(31, 32, 65, 0.5);
     text-decoration: none;
   }
+}
+.auth {
+  display: flex;
+  align-items: baseline;
+}
+.user {
+  margin-left: 3rem;
+  border-left: 1px solid rgba(31, 32, 65, 0.1);
+  padding-left: 3rem;
 }

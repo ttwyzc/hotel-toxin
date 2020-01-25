@@ -1,24 +1,35 @@
 include ../button/button
 
-mixin header()
-  - links = ['Home', 'About Us', 'Services', 'Careers', 'News', 'Documentation'];
+mixin header(prop = {authorised, mode})
+  - const links = ['Home', 'About Us', 'Services', 'Careers', 'News', 'Documentation'];
+  - const {authorised= false, mode='default'} = prop;
+  - const full = (mode === 'default') ? true : false;
   .header
-    .header__logo
-      img(src="../../components/header/img/logo-full.svg", alt="")
-    nav.header__menu
-      ul.menu
+    if full
+      .header__logo
+        img(src="../../components/header/img/logo-full.svg", alt="")
+      nav.header__menu
+        ul.menu
         each link in links
           li.menu__item
             a(href="#" class="menu__link")=link
-        li.menu__item
-          +button({
-            theme: 'border', 
-            text: 'Login', 
-            isLink: true
-            })
-        li.menu__item
-          +button({
-            theme: 'cover', 
-            text: 'Register', 
-            isLink: true
-            })
+        .auth
+          if authorised
+            .line
+            .user
+              | Cosmin Negoita
+          else
+            +button({
+              theme: 'border', 
+              text: 'Login', 
+              isLink: true
+              })
+            +button({
+              theme: 'cover', 
+              text: 'Register', 
+              isLink: true
+              })
+    else
+      .header-min
+        .header-min__logo
+          img(src="../../components/header/img/logo.svg", alt="logo")

@@ -1,31 +1,24 @@
 include ../button/button
 
 mixin header()
-    .header
-      img(src="../../components/header/img/logo-full.svg", alt="").header__logo
-      .header__menu
-        ul.menu
+  - links = ['Home', 'About Us', 'Services', 'Careers', 'News', 'Documentation'];
+  .header
+    .header__logo
+      img(src="../../components/header/img/logo-full.svg", alt="")
+    nav.header__menu
+      ul.menu
+        each link in links
           li.menu__item
-            a(href="#" class="menu__link") home
-          li.menu__item
-            a(href="#" class="menu__link") home
-          li.menu__item
-            a(href="#" class="menu__link") home
-          li.menu__item
-            a(href="#" class="menu__link") home
-          li.menu__item
-            a(href="#" class="menu__link") home
-          li.menu__item
-            a(href="#" class="menu__link") home
-          li.menu__item
-            +button({
-              theme: 'border', 
-              text: 'Login', 
-              isLink: true
-              })
-          li.menu__item
-            +button({
-              theme: 'cover', 
-              text: 'Register', 
-              isLink: true
-              })
+            a(href="#" class="menu__link")=link
+        li.menu__item
+          +button({
+            theme: 'border', 
+            text: 'Login', 
+            isLink: true
+            })
+        li.menu__item
+          +button({
+            theme: 'cover', 
+            text: 'Register', 
+            isLink: true
+            })

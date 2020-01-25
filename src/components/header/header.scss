@@ -6,6 +6,8 @@
   align-items: center;
   &__logo {
     margin: 1.5rem 0;
+    // remove gaps of img inside div
+    line-height: 0;
   }
 }
 .menu {
@@ -17,7 +19,8 @@
     // display: block;
     color: white;
     text-align: center;
-    padding: 0 14px;
+    // padding: 0 14px;
+    margin-left: 20px;
     text-decoration: none;
   }
   &__link {

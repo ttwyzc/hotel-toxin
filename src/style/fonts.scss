@@ -34,3 +34,13 @@
     url('../fonts/montserrat-v14-latin-700.ttf') format('truetype'),
     url('../fonts/montserrat-v14-latin-700.svg#Montserrat') format('svg');
 }
+
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Material Icons'), local('MaterialIcons-Regular'),
+    url('../fonts/MaterialIcons-Regular.woff') format('woff'),
+    url('../fonts/MaterialIcons-Regular.ttf') format('truetype'),
+    url('../fonts/MaterialIcons-Regular.svg') format('svg');
+}

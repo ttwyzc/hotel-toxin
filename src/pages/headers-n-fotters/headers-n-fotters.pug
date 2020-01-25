@@ -1,6 +1,6 @@
 extends ../base-min/base-min
 include ../../components/header/header
-
+include ../../components/footer/footer
 include ../../components/wrapper/wrapper
 include ../../components/colors/colors
 include ../../components/text-type/text-type
@@ -14,12 +14,11 @@ block main
       .ahrf 
       section.main
         header.wrapper__header()
-          +header()
+          +header({authorised: false, menu: menuUikit})
         .saf  
         header.wrapper__header
-          +header({
-          authorised: true
-          })
+          +header({authorised: true, menu: menuUikit})
         .saf  
-
+        footer.wrapper__footer
+          +footer()
         .saf  

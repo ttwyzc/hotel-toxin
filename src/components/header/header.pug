@@ -1,18 +1,22 @@
 include ../button/button
 
-mixin header(prop = {authorised, mode})
-  - const links = ['Home', 'About Us', 'Services', 'Careers', 'News', 'Documentation'];
-  - const {authorised= false, mode='default'} = prop;
-  - const full = (mode === 'default') ? true : false;
+mixin header(prop = {authorised, mode, menu})
+  - 
+    const {authorised= false, mode='default', menu=[]} = prop;
+    const full = (mode === 'default') ? true : false;
+
   .header
     if full
       .header__logo
         img(src="../../components/header/img/logo-full.svg", alt="")
       nav.header__menu
         ul.menu
-        each link in links
+        each link in menu
           li.menu__item
-            a(href="#" class="menu__link")=link
+            if link.isActive 
+              a(href=link.link class="menu__link menu__link_active")=link.title    
+            else
+              a(href=link.link class="menu__link")=link.title
         .auth
           if authorised
             .line

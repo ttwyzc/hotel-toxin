@@ -18,10 +18,8 @@
 .menu {
   &__item {
     float: left;
-    // display: block;
     color: white;
     text-align: center;
-    // padding: 0 14px;
     margin-left: 3rem;
     text-decoration: none;
   }
@@ -31,6 +29,9 @@
     font-weight: normal;
     color: rgba(31, 32, 65, 0.5);
     text-decoration: none;
+    &_active {
+      font-weight: bold;
+    }
   }
 }
 .auth {

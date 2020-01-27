@@ -1,0 +1,37 @@
+@import 'src/style/variables.scss';
+
+.footer {
+  padding-top: 100px;
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1160px;
+    margin: 0 auto;
+    height: 372px;
+    box-shadow: 0px 1px 0px rgba(31, 32, 65, 0.1);
+    align-items: baseline;
+  }
+  &__logo {
+    max-width: 260px;
+    color: $dark-75;
+    &_text {
+      padding-top: 10px;
+    }
+  }
+  &__copyright {
+    display: flex;
+    align-items: center;
+    height: 70px;
+    justify-content: space-between;
+  }
+  &__brand {
+    padding-left: 2rem;
+  }
+  &__navi {
+    display: inline-block;
+    list-style: none;
+  }
+  &__nav {
+    align-content: center;
+  }
+}

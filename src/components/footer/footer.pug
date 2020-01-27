@@ -1,0 +1,28 @@
+mixin footer-nav(links = {data})
+  - const {data} = links;
+  ul.footer__navi
+    li= data.name
+    each link in data.links
+      li
+        a(href=link.link class="")=link.title
+
+
+mixin footer()
+  footer.footer
+    .footer__content
+      .footer__logo
+        img(src="../../components/footer/img/logo-full.svg", alt="", srcset="")
+        p.footer__logo_text Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis.
+      +footer-nav({data: footerUikitOne})
+      +footer-nav({data: footerUikitTwo})
+      +footer-nav({data: footerUikitThree})
+      .footer__logo
+        img(src="../../components/footer/img/logo-full.svg", alt="", srcset="")
+        p Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis.
+    .container-inner
+      .footer__copyright
+        p Copyright © 2018 Toxin UI Kit. All rights reserved.
+        .footer__brands
+          img(src="../../components/footer/img/brands/twitter.svg", alt="twitter logo" class="footer__brand")
+          img(src="../../components/footer/img/brands/facebook.svg", alt="facebook logo" class="footer__brand")
+          img(src="../../components/footer/img/brands/instagram.svg", alt="instagram logo" class="footer__brand")

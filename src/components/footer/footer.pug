@@ -1,28 +1,48 @@
+include ../input/input
+
 mixin footer-nav(links = {data})
   - const {data} = links;
-  ul.footer__navi
-    li= data.name
+  ul.footer__nav
+    h3= data.name
     each link in data.links
-      li
-        a(href=link.link class="")=link.title
+      li.footer__nav_item
+        a(href=link.link class="footer__nav_link")=link.title
 
 
-mixin footer()
+mixin footer(prop = {mode})
+  - const {mode='default'} = prop;
+  - const full = (mode === 'default') ? true : false;
   footer.footer
-    .footer__content
-      .footer__logo
-        img(src="../../components/footer/img/logo-full.svg", alt="", srcset="")
-        p.footer__logo_text Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis.
-      +footer-nav({data: footerUikitOne})
-      +footer-nav({data: footerUikitTwo})
-      +footer-nav({data: footerUikitThree})
-      .footer__logo
-        img(src="../../components/footer/img/logo-full.svg", alt="", srcset="")
-        p Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis.
-    .container-inner
-      .footer__copyright
-        p Copyright © 2018 Toxin UI Kit. All rights reserved.
-        .footer__brands
-          img(src="../../components/footer/img/brands/twitter.svg", alt="twitter logo" class="footer__brand")
-          img(src="../../components/footer/img/brands/facebook.svg", alt="facebook logo" class="footer__brand")
-          img(src="../../components/footer/img/brands/instagram.svg", alt="instagram logo" class="footer__brand")
+    if full
+      .footer__content
+        .footer__logo
+          img(src="../../components/footer/img/logo-full.svg", alt="", srcset="")
+          p.footer__logo_text Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis.
+        +footer-nav({data: footerUikitOne})
+        +footer-nav({data: footerUikitTwo})
+        +footer-nav({data: footerUikitThree})
+        .footer__sub
+          h3 Subscribe to our newsletter
+          p.footer__sub_text Receive our latest news and promotions in your inbox!
+          .input-with-icon
+            +input({type: 'text', placeholder: 'Email'})
+            .icon
+              i.material-icons.gradient arrow_forward
+
+      .container-inner
+        .footer__copyright
+          p.footer__copyright_item Copyright © 2018 Toxin UI Kit. All rights reserved.
+          .footer__brands
+            img(src="../../components/footer/img/brands/twitter.svg", alt="twitter logo" class="footer__brand")
+            img(src="../../components/footer/img/brands/facebook.svg", alt="facebook logo" class="footer__brand")
+            img(src="../../components/footer/img/brands/instagram.svg", alt="instagram logo" class="footer__brand")
+    else
+      .footer__content
+        .footer__mini
+          .footer__logo
+            img(src="../../components/footer/img/logo-full.svg", alt="", srcset="")
+          p.footer__logo_text Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis.
+          .footer__brand
+            img(src="../../components/footer/img/brands/twitter.svg", alt="twitter logo" class="footer__brand")
+            img(src="../../components/footer/img/brands/facebook.svg", alt="facebook logo" class="footer__brand")
+            img(src="../../components/footer/img/brands/instagram.svg", alt="instagram logo" class="footer__brand")

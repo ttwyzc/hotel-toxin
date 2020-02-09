@@ -1,0 +1,19 @@
+.colors-n-types {
+  display: flex;
+  justify-content: space-between;
+  flex: 1 1 auto;
+  margin-top: 3.7rem;
+  flex-flow: row wrap;
+}
+
+.colors {
+  display: flex;
+  flex-direction: column;
+}
+
+.text-types {
+  display: flex;
+  flex-direction: column;
+  flex: 0 1 40rem;
+  margin-right: 3.5rem;
+}

@@ -1,51 +1,46 @@
 extends ../base-min/base-min
-include ../../components/wrapper/wrapper
 include ../../components/colors/colors
 include ../../components/text-type/text-type
 
-block main
+
+
+block content
+  +header({"mode": 'min'})
   .wrapper
-    .content
-      header.wrapper__header
-        .container
-          +header-min()
-      section.main
-        .container-inner
-          .flex.space-between
-            .colors
-              .column
-                +color({title: 'Dark Shade 100%',
-                  hex: '#1F2041',
-                  style: 'dark-100',
-                  isShadowed: true
-                  })
-                +color({title: 'Dark Shade 75%',
-                  hex: '#1F2041',
-                  style: 'dark-75',
-                  })
-                +color({title: 'Dark Shade 50%',
-                  hex: '#1F2041',
-                  style: 'dark-50',
-                  })
-                +color({title: 'Dark Shade 25%',
-                  hex: '#1F2041',
-                  style: 'dark-25',
-                  })
-                +color({title: 'Dark Shade 5%',
-                  hex: '#1F2041',
-                  style: 'dark-5',
-                  })
-                +color({title: 'Purple',
-                  hex: '#BC9CFF',
-                  style: 'purple',
-                  })
-                +color({title: 'Green',
-                  hex: '#6FCF97',
-                  style: 'green',
-                  })
-            .text-types
-              .column
-                +text-type('H1', '<h1>This one is the sub-section or widget title</h1>')
-                +text-type('H2', '<h2>Next one is the item title inside widgets</h2>')
-                +text-type('H3', '<h3>This is a label or CTA text</h3>')
-                +text-type('Body', 'This is the body text which is used for most of the design, like paragraphs, lists, etc.')
+    .wrapper__content
+      .colors-n-types
+        .colors
+          +color({title: 'Dark Shade 100%',
+            hex: '#1F2041',
+            style: 'dark-100',
+            isShadowed: true
+            })
+          +color({title: 'Dark Shade 75%',
+            hex: '#1F2041',
+            style: 'dark-75',
+            })
+          +color({title: 'Dark Shade 50%',
+            hex: '#1F2041',
+            style: 'dark-50',
+            })
+          +color({title: 'Dark Shade 25%',
+            hex: '#1F2041',
+            style: 'dark-25',
+            })
+          +color({title: 'Dark Shade 5%',
+            hex: '#1F2041',
+            style: 'dark-5',
+            })
+          +color({title: 'Purple',
+            hex: '#BC9CFF',
+            style: 'purple',
+            })
+          +color({title: 'Green',
+            hex: '#6FCF97',
+            style: 'green',
+            })
+        .text-types
+          +text-type('H1', '<h1>This one is the sub-section or widget title</h1>')
+          +text-type('H2', '<h2>Next one is the item title inside widgets</h2>')
+          +text-type('H3', '<h3>This is a label or CTA text</h3>')
+          +text-type('Body', 'This is the body text which is used for most of the design, like paragraphs, lists, etc.')

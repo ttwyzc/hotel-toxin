@@ -1,0 +1,16 @@
+@import 'src/style/variables.scss';
+
+.bullet-list {
+  list-style: none;
+  &__item {
+    &::before {
+      content: '';
+      display: inline-block;
+      height: 1rem;
+      width: 1rem;
+      margin-right: 1rem;
+      border-radius: 50%;
+      background-color: $dark-25;
+    }
+  }
+}

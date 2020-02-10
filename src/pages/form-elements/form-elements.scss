@@ -1,0 +1,15 @@
+.form-elems {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  flex: 1;
+  &__column {
+    max-width: 32rem;
+  }
+
+  &__input-text {
+    & > *:not(:last-child) {
+      margin-bottom: 2rem;
+    }
+  }
+}

@@ -1,36 +1,57 @@
 extends ../base-min/base-min
 include ../../components/wrapper/wrapper
 include ../../components/button/button
-include ../../components/input/input.pug
+include ../../components/input/input
+include ../../components/bullet-list/bullet-list
 
-block main
+
+block content
+  +header({"mode": 'min'})
   .wrapper
-    .content
-      header.wrapper__header
-        .container
-          +header-min()
-      section.main
-        .container-inner
-          .flex.column.align-start
-            +button({
-              theme: 'cover', 
-              text: 'click me', 
-              })
-            +button({
-              theme: 'border', 
-              text: 'click me', 
-              })
-            +button({
-              theme: 'text', 
-              text: 'click me', 
-              color: 'grey',
-              isLink: false
-              })
-            +button({
-              theme: 'text', 
-              text: 'click me', 
-              color: 'purple',
-              isLink: false
-              })
-            +input({type: 'text', title: 'text form', placeholder: 'Email'})
-            +input({type: 'text', title: 'text form', placeholder: 'Email'})
+    .wrapper__content
+      .form-elems
+        .form-elems__column
+          .form-elems__input-text
+            +input({type: 'text', title: 'text field', placeholder: 'Email'})
+            +input({type: 'text', title: 'text field', placeholder: 'This is pretty awesome'})
+            +input({type: 'dropdown', title: 'Dropdown', placeholder: 'Сколько гостей'})
+            +input({type: 'text', title: 'Masked text field', placeholder: 'ДД.ММ.ГГ'})
+          .form-elems__buttons
+              +button({
+                theme: 'cover',
+                text: 'click me',
+                isLink: false,
+                size: 'medium'
+                })
+              +button({
+                theme: 'cover',
+                text: 'click me',
+                isLink: false,
+                size: 'medium'
+                })
+              +button({
+                theme: 'border',
+                text: 'click me',
+                isLink: false,
+                size: 'medium'
+                })
+              +button({
+                theme: 'border',
+                text: 'click me',
+                isLink: false,
+                size: 'medium'
+                })
+              +button({
+                theme: 'text',
+                text: 'click me',
+                color: 'purple',
+                isLink: true
+                })
+              +button({
+                theme: 'text',
+                text: 'click me',
+                color: 'grey',
+                isLink: true
+                })
+
+

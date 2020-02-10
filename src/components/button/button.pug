@@ -3,21 +3,25 @@
   text - текст кнопки ('string')
   color - цвет текста для type: 'thene' (grey, purple)
   isLink - (true, false)
+  size - размер (small, medium, large)
+
   +button({
-    theme: 'text', 
-    text: 'click me', 
+    theme: 'text',
+    text: 'click me',
     color: 'purple',
-    isLink: 'true'
+    isLink: true
+    size: 'medium'
     })
 
 mixin button(prop = {theme, color, isLink, text})
-  - 
-    const {theme='cover', color='', isLink=true, text='Button'} = prop;
+  -
+    const {theme='cover', color='', isLink=true, text='Button', size} = prop;
 
     let classes = '';
-    classes += theme ? ' button__theme_' + theme : '';
-    classes += color ? ' button__theme_text_' + color : '';
+    classes += theme ? ' button_theme_' + theme : '';
+    classes += color ? ' button_theme_text--' + color : '';
+    classes += size ? ' button__size--' + size : '';
 
   - const tag = isLink ? 'a' : 'button';
-  
+
   #{tag}.button(class=classes)= text

@@ -1,10 +1,13 @@
 mixin input(prop)
 
-	if prop.type === 'text' || prop.type === 'password' || prop.type === 'email' || prop.type === 'textarea' || prop.type === 'select' || prop.type === 'file'
+	if prop.type === 'text' || prop.type === 'password' || prop.type === 'email' || prop.type === 'dropdown' || prop.type === 'select' || prop.type === 'file'
 		.input
 			if prop.title
-				label.input__title() 
+				label.input__title()
 					h3 #{prop.title}
 					input.input(class='input__elem ' placeholder=prop.placeholder type='text')
 			else
-				input.input(class='input__elem' type='text' )
+				input.input(class='input__elem' type='text' placeholder=prop.placeholder)
+
+			if prop.type === 'dropdown'
+				| pass

@@ -1,7 +1,8 @@
-@import '~src/style/colors.scss';
+@import 'src/style/variables.scss';
 
 .input {
   outline: none;
+  width: 100%;
   &__title {
   }
   &__elem {
@@ -18,7 +19,9 @@
     }
   }
 }
-.input__title, .input__elem {
+
+.input__title,
+.input__elem {
   display: block;
   margin: 5px 0px;
-} 
+}

@@ -1,39 +1,45 @@
 include ../button/button
 
 mixin header(prop = {authorised, mode, menu})
-  - 
+  -
     const {authorised= false, mode='default', menu=[]} = prop;
     const full = (mode === 'default') ? true : false;
 
-  .header
-    if full
-      .header__logo
-        img(src="../../components/header/img/logo-full.svg", alt="")
-      nav.header__menu
-        ul.menu
-        each link in menu
-          li.menu__item
-            if link.isActive 
-              a(href=link.link class="menu__link menu__link_active")=link.title    
+  if full
+    header.header
+      .header__container
+        .header__logo-box
+          img(src="../../components/header/img/logo-full.svg", alt="")
+        nav.header__menu
+          ul.menu
+            each link in menu
+              li.menu__item
+                if link.isActive
+                  a(href=link.link class="menu__link menu__link_active")=link.title
+                else
+                  a(href=link.link class="menu__link")=link.title
+          .auth
+            if authorised
+              .header__line
+              .header__user
+                | Cosmin Negoita
             else
-              a(href=link.link class="menu__link")=link.title
-        .auth
-          if authorised
-            .line
-            .user
-              | Cosmin Negoita
-          else
-            +button({
-              theme: 'border', 
-              text: 'Login', 
-              isLink: true
-              })
-            +button({
-              theme: 'cover', 
-              text: 'Register', 
-              isLink: true
-              })
-    else
-      .header-min
-        .header-min__logo
-          img(src="../../components/header/img/logo.svg", alt="logo")
+              .header__buttons
+                +button({
+                  theme: 'border',
+                  text: 'Login',
+                  isLink: true,
+                  size: 'small'
+                  })
+                +button({
+                  theme: 'cover',
+                  text: 'Register',
+                  isLink: true,
+                  size: 'small'
+                  })
+  else
+    header.header-min
+      .header-min__container
+        .header-min__logo-box
+          img(src="../../components/header/img/logo.svg", alt="logo").header-min__logo
+

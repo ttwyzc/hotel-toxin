@@ -5,22 +5,15 @@ include ../../components/wrapper/wrapper
 include ../../components/colors/colors
 include ../../components/text-type/text-type
 
-block main
-  .wrapper.bg-grey
-    .content
-      header.wrapper__header1
-        .container
-          +header-min()
-      .ahrf 
-      section.main
-        header.wrapper__header()
-          +header({authorised: false, menu: menuUikit})
-        .saf  
-        header.wrapper__header
-          +header({authorised: true, menu: menuUikit})
-        .saf  
-        footer.wrapper__footer
-          +footer({mode: 'default'})
-        .saf  
-        footer.wrapper__footer
-          +footer({mode: 'mini'})
+
+block content
+  .wrapper__grey
+    +header({mode: 'mini'})
+    .headers-n-fotters__free-space
+    +header({authorised: false, menu: menuUikit})
+    .headers-n-fotters__free-space
+    +header({authorised: true, menu: menuUikit})
+    .headers-n-fotters__free-space
+    +footer({mode: 'default'})
+    .headers-n-fotters__free-space
+    +footer({mode: 'mini'})

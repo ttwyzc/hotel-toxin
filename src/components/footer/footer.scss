@@ -1,6 +1,7 @@
 @import 'src/style/variables.scss';
 
 .footer {
+  background-color: #fff;
   &__content {
     display: flex;
     justify-content: space-between;
@@ -39,6 +40,8 @@
     align-items: center;
     height: 70px;
     justify-content: space-between;
+    max-width: 116rem;
+    margin: 0 auto;
     &_item {
       font-size: 14px;
       line-height: 17px;
@@ -50,6 +53,10 @@
   }
   &__brand {
     padding-left: 2rem;
+  }
+
+  &__brands {
+    margin-left: auto;
   }
   &__nav {
     display: inline-block;

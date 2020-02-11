@@ -20,7 +20,7 @@ mixin button(prop = {theme, color, isLink, text})
     let classes = '';
     classes += theme ? ' button_theme_' + theme : '';
     classes += color ? ' button_theme_text--' + color : '';
-    classes += size ? ' button__size--' + size : '';
+    classes += size ? ' button_theme_' + theme + '--' + size : '';
 
   - const tag = isLink ? 'a' : 'button';
 

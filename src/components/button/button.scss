@@ -22,12 +22,24 @@
       background-origin: border-box;
       background-clip: padding-box, border-box;
       color: $purple;
+      &--small {
+        padding: 0.8rem 1.8rem;
+      }
+      &--medium {
+        padding: 1.2rem 1.7rem;
+      }
     }
 
     &_cover {
       background: $primary-gradient;
       border-radius: 22px;
       color: white;
+      &--small {
+        padding: 1rem 2rem;
+      }
+      &--medium {
+        padding: 1.4rem 1.9rem;
+      }
     }
 
     &_text {
@@ -38,15 +50,6 @@
       &--purple {
         color: $purple;
       }
-    }
-  }
-
-  &__size {
-    &--small {
-      padding: 1rem 2rem;
-    }
-    &--medium {
-      padding: 1.4rem 1.9rem;
     }
   }
 }

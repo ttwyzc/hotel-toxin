@@ -1,0 +1,40 @@
+@import 'src/style/variables.scss';
+.radio {
+  &__radio-input {
+    display: none;
+  }
+
+  &__radio-label {
+    cursor: poiner;
+    position: relative;
+    padding-left: 3rem;
+    display: inline-block;
+  }
+
+  &__radio-button {
+    height: 2rem;
+    width: 2rem;
+    border: 1px solid $purple;
+    border-radius: 50%;
+    position: absolute;
+    left: 0;
+    top: 0.2rem;
+
+    &::after {
+      content: '';
+      display: block;
+      height: 1.2rem;
+      width: 1.2rem;
+      margin-top: 3px;
+      margin-left: 3px;
+      border-radius: 50%;
+      background-image: $primary-gradient;
+      opacity: 0;
+      transition: opacity 0.2s;
+    }
+  }
+
+  &__radio-input:checked ~ &__radio-label &__radio-button::after {
+    opacity: 1;
+  }
+}

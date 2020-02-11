@@ -11,11 +11,16 @@
     padding: 13px 15px;
     border: 1px solid $dark-25;
     border-radius: 4px;
+    color: $dark-75;
+    font-style: normal;
     &:hover {
       border: 1px solid $dark-50;
     }
     &:focus {
       border: 1px solid $dark-50;
+    }
+    &::placeholder {
+      color: $dark-25;
     }
   }
 }

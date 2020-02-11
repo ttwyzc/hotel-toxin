@@ -1,18 +1,22 @@
 @import 'src/style/variables.scss';
 
 .button {
-  border: none;
-  font-weight: bold;
-  font-size: 1.2rem;
-  text-transform: uppercase;
-  line-height: 1;
-  cursor: pointer;
-  outline: none;
-  word-wrap: none;
-
-  &:hover {
-    opacity: 0.5;
+  &,
+  &:link,
+  &:visited {
+    border: none;
+    font-weight: bold;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    line-height: 1;
+    cursor: pointer;
+    outline: none;
+    word-wrap: none;
   }
+
+  // &:hover {
+  //   opacity: 0.5;
+  // }
 
   &_theme {
     &_border {
@@ -28,10 +32,19 @@
       &--medium {
         padding: 1.2rem 1.7rem;
       }
+      &:hover,
+      &:focus {
+        background-image: linear-gradient(white, white),
+          linear-gradient(
+            180deg,
+            rgba(#bc9cff, 0.5) 0%,
+            rgba(#8ba4f9, 0.5) 100%
+          );
+      }
     }
 
     &_cover {
-      background: $primary-gradient;
+      background-image: $primary-gradient;
       border-radius: 22px;
       color: white;
       &--small {
@@ -39,6 +52,14 @@
       }
       &--medium {
         padding: 1.4rem 1.9rem;
+      }
+      &:hover,
+      &:focus {
+        background-image: linear-gradient(
+          180deg,
+          rgba(#bc9cff, 0.5) 0%,
+          rgba(#8ba4f9, 0.5) 100%
+        );
       }
     }
 
@@ -49,6 +70,10 @@
       }
       &--purple {
         color: $purple;
+      }
+      &:hover,
+      &:focus {
+        opacity: 0.5;
       }
     }
   }

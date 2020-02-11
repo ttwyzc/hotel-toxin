@@ -7,7 +7,6 @@
     justify-content: space-between;
     max-width: 1160px;
     margin: 0 auto;
-    // height: 372px;
     box-shadow: 0px 1px 0px rgba(31, 32, 65, 0.1);
     align-items: flex-start;
     padding: 100px 0px;
@@ -45,10 +44,7 @@
     &_item {
       font-size: 14px;
       line-height: 17px;
-
-      /* Dark 75% */
-
-      color: rgba(31, 32, 65, 0.75);
+      color: $dark-75;
     }
   }
   &__brand {
@@ -62,19 +58,11 @@
     display: inline-block;
     list-style: none;
     &_item {
-      // display: inline-block;
       margin-top: 16px;
     }
     &_link {
-      font-family: Montserrat;
-      font-style: normal;
-      font-weight: normal;
       font-size: 14px;
-      line-height: 17px;
-
-      /* Dark 50% */
-
-      color: rgba(31, 32, 65, 0.5);
+      color: $dark-50;
       text-decoration: none;
     }
   }

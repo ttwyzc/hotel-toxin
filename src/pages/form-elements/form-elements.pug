@@ -55,3 +55,7 @@ block content
                 })
           .form-elems__bullets
             +bullet-list({items: bulletList})
+          .form__radio-group
+            +input({type: 'radio', id: 'women', name: 'gender', label: 'Мужчина',})
+            +input({type: 'radio', id: 'men', name: 'gender', label: 'Женщина',})
+

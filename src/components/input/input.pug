@@ -1,7 +1,7 @@
 include ../radio-button/radio-button
 
 mixin input(prop = {})
-  - const {title='title', placeholder='placeholder', type='text'} = prop;
+  - const {title, placeholder='placeholder', type='text'} = prop;
 
   .input
     if type === 'text' || type === 'password' || type === 'email'

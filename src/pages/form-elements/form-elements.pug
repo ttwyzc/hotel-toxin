@@ -4,7 +4,6 @@ include ../../components/button/button
 include ../../components/input/input
 include ../../components/bullet-list/bullet-list
 
-
 block content
   +header({"mode": 'min'})
   .wrapper
@@ -63,6 +62,9 @@ block content
           .form-elems__bullets
             +bullet-list({items: bulletList})
           .form__radio-group
-            +input({type: 'radio', id: 'women', name: 'gender', label: 'Мужчина',})
-            +input({type: 'radio', id: 'men', name: 'gender', label: 'Женщина',})
+            +input({type: 'radio', id: 'women', name: 'gender', label: 'Мужчина', isChecked: true})
+            +input({type: 'radio', id: 'men', name: 'gender', label: 'Женщина'})
+          .form__toggle-group
+            +input({type: 'toggle', label: 'Подписаться на новости'})
+            +input({type: 'toggle', label: 'Подписаться на новости', isChecked: true})
 

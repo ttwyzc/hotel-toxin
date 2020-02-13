@@ -1,0 +1,6 @@
+mixin toggle-button(prop = {label})
+  - const {label = 'Label', isChecked = false} = prop;
+  .toggle
+    label.toggle__toggle-label(for=id) #{label}
+      input.toggle__toggle-input(type='checkbox' checked=isChecked)
+      span.toggle__toggle-button

@@ -1,8 +1,8 @@
 $dark-100: #1f2041;
-$dark-75: rgba(31, 32, 65, 0.75);
-$dark-50: rgba(31, 32, 65, 0.5);
-$dark-25: rgba(31, 32, 65, 0.25);
-$dark-5: rgba(31, 32, 65, 0.05);
+$dark-75: rgba($dark-100, 0.75);
+$dark-50: rgba($dark-100, 0.5);
+$dark-25: rgba($dark-100, 0.25);
+$dark-5: rgba($dark-100, 0.05);
 $purple: #bc9cff;
 $green: #6fcf97;
 $primary-gradient: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);

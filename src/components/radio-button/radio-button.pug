@@ -1,7 +1,8 @@
 mixin radio-button(props = {})
-  - const {id='id', name='name', label='radio'} = props;
+  - const {id='id', name='name', label='radio', isChecked=false} = props;
+
   .radio__radio-group
-    input.radio__radio-input(type='radio' name=name id=id)
+    input.radio__radio-input(type='radio' name=name id=id checked=isChecked)
     label.radio__radio-label(for=id) #{label}
       span.radio__radio-button
 

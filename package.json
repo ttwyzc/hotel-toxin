@@ -6,10 +6,10 @@
   "scripts": {
     "dev:colors": "parcel ./src/pages/colors-n-types/colors-n-types.pug",
     "dev:forms": "parcel ./src/pages/form-elements/form-elements.pug",
-    "dev:headers": "parcel ./src/pages/headers-n-fotters/headers-n-fotters.pug",
+    "dev:headers": "parcel ./src/pages/headers-n-footers/headers-n-footers.pug",
     "build:colors": "parcel build ./src/pages/colors-n-types/colors-n-types.pug",
     "build:forms": "parcel build ./src/pages/form-elements/form-elements.pug",
-    "build:headers": "parcel build ./src/pages/headers-n-fotters/headers-n-fotters.pug"
+    "build:headers": "parcel build ./src/pages/headers-n-footers/headers-n-footers.pug"
   },
   "repository": {
     "type": "git",

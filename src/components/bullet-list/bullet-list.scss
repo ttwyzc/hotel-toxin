@@ -1,11 +1,11 @@
-@import 'src/style/variables.scss';
-
 .bullet-list {
   list-style: none;
+
   &__item {
     padding-left: 2rem;
     display: inline-block;
     position: relative;
+
     &::before {
       content: '';
       position: absolute;

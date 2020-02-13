@@ -1,6 +1,5 @@
 mixin bullet-list(prop = {items})
-  -
-    const {items=[]} = prop;
+  - const {items=[]} = prop;
   ul.bullet-list
     each item in items
       li.bullet-list__item #{item}

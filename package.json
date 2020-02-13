@@ -4,10 +4,12 @@
   "description": "",
   "main": "./src/entry.js",
   "scripts": {
-    "dev1": "parcel src/pages/colors-n-types/colors-n-types.pug --open",
-    "dev": "parcel src/pages/form-elements/form-elements.pug --open",
-    "dev2": "parcel src/pages/headers-n-fotters/headers-n-fotters.pug --open",
-    "build": "parcel build src/pages/headers-n-fotters/headers-n-fotters.pug"
+    "dev:colors": "parcel ./src/pages/colors-n-types/colors-n-types.pug",
+    "dev:forms": "parcel ./src/pages/form-elements/form-elements.pug",
+    "dev:headers": "parcel ./src/pages/headers-n-fotters/headers-n-fotters.pug",
+    "build:colors": "parcel build ./src/pages/colors-n-types/colors-n-types.pug",
+    "build:forms": "parcel build ./src/pages/form-elements/form-elements.pug",
+    "build:headers": "parcel build ./src/pages/headers-n-fotters/headers-n-fotters.pug"
   },
   "repository": {
     "type": "git",

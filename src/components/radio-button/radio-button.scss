@@ -13,7 +13,7 @@
   &__radio-button {
     height: 2rem;
     width: 2rem;
-    border: 1px solid $purple;
+    border: 1px solid $dark-25;
     border-radius: 50%;
     position: absolute;
     left: 0;
@@ -35,5 +35,8 @@
 
   &__radio-input:checked ~ &__radio-label &__radio-button::after {
     opacity: 1;
+  }
+  &__radio-input:checked ~ &__radio-label &__radio-button {
+    border: 1px solid $purple;
   }
 }

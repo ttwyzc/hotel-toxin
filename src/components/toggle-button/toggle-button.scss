@@ -39,8 +39,10 @@
   }
 
   &__toggle-input:checked ~ &__toggle-button::before {
-    border: 1px solid $purple;
     background-image: $primary-gradient;
     transform: translateX(1.8rem);
+  }
+  &__toggle-input:checked ~ &__toggle-button {
+    border: 1px solid $purple;
   }
 }

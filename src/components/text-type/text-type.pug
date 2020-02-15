@@ -1,5 +1,16 @@
+//-
+  title - текст заголовка ('string')
+  text - элемент текст ('string')
+
+  +text-type(
+    'H1',
+  '<h1>This one is the sub-section or widget title</h1>'
+  )
+
+
+
 mixin text-type(title, text)
-  - var style=title 
+  - var style=title
   .text-type
     .text-type__title(class="text-type__title_"+style) #{title}
     .text-type__body !{text}

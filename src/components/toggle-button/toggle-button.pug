@@ -1,3 +1,11 @@
+//-
+  label - label кнопки ('string')
+
+  +toggle-button({
+    label: 'Получать спецпредложения'
+  })
+
+
 mixin toggle-button(prop = {label})
   - const {label = 'Label', isChecked = false} = prop;
   .toggle

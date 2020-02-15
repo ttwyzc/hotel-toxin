@@ -1,3 +1,14 @@
+//-
+  authorised - Статус пользователя (true, false)
+  mode - "тип" шапки сайта. ('min', 'full')
+  menu - объект пунктов меню. {object: object}
+
+  +header({
+    authorised: true,
+    menu: menuUikit
+    })
+
+
 include ../button/button
 
 mixin header(prop = {authorised, mode, menu})

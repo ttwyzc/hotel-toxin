@@ -1,6 +1,20 @@
+//-
+  title - текст заголовка цвета ('string')
+  hex - hex-код цвета ('string')
+  style - цвет подложки ('string')
+  isShadowed - (true, false)
+
+  +color({
+    title: 'Dark Shade 100%',
+    hex: '#1F2041',
+    style: 'dark-100',
+    isShadowed: true
+    })
+
+
 mixin color(prop = {title, hex, style, isShadowed})
-  - 
-    const {title, hex, style='dark-100', isShadowed=false} = prop;
+  -
+    const {title='title', hex='#hex', style='dark-100', isShadowed=false} = prop;
 
     let classes = '';
     classes += style ? ' color__box_' + style : '';

@@ -1,3 +1,19 @@
+//-
+  id - уникальный идентификатор ('string')
+  name - имя для связи с другими radio-buttons ('string')
+  label - label кнопки ('string')
+  isChecked - статус checked (true, false)
+
+
+  +input({
+    type: 'radio',
+    id: 'women',
+    name: 'gender',
+    label: 'Мужчина',
+    isChecked: true
+    })
+
+
 mixin radio-button(props = {})
   - const {id='id', name='name', label='radio', isChecked=false} = props;
 

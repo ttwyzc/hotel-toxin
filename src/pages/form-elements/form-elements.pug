@@ -3,6 +3,8 @@ include ../../components/wrapper/wrapper
 include ../../components/button/button
 include ../../components/input/input
 include ../../components/bullet-list/bullet-list
+include ../../components/like/like
+
 
 block content
   +header({"mode": 'min'})
@@ -67,4 +69,5 @@ block content
           .form-elems__toggle-group
             +input({type: 'toggle', label: 'Подписаться на новости'})
             +input({type: 'toggle', label: 'Подписаться на новости', isChecked: true})
-
+          .form-elems__likes
+            +like()

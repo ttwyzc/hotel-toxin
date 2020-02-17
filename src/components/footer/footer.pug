@@ -1,7 +1,7 @@
 include ../input/input
 
 mixin footer-nav(links = {data})
-  - const {data} = links;
+  - const { data } = links;
   ul.footer__nav
     h3= data.name
     each link in data.links
@@ -10,7 +10,7 @@ mixin footer-nav(links = {data})
 
 
 mixin footer(prop = {mode})
-  - const {mode='default'} = prop;
+  - const { mode='default' } = prop;
   - const full = (mode === 'default') ? true : false;
   footer.footer
     if full

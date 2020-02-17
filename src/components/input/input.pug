@@ -14,7 +14,7 @@ include ../radio-button/radio-button
 include ../toggle-button/toggle-button
 
 mixin input(prop = {})
-  - const {title, placeholder='placeholder', type='text'} = prop;
+  - const { title, placeholder='placeholder', type='text' } = prop;
 
   .input
     if type === 'text' || type === 'password' || type === 'email'

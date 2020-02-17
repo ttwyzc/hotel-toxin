@@ -13,8 +13,8 @@ include ../button/button
 
 mixin header(prop = {authorised, mode, menu})
   -
-    const {authorised= false, mode='default', menu=[]} = prop;
-    const full = (mode === 'default') ? true : false;
+    const { authorised= false, mode='default', menu=[] } = prop;
+    const full = ( mode === 'default' ) ? true : false;
 
   if full
     header.header

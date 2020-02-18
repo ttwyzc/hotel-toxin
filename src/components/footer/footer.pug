@@ -45,7 +45,7 @@ mixin footer(prop = {mode})
     if full
       .footer__content
         .footer__logo
-          img(src=require("../../components/footer/img/logo-footer.svg"), alt="", srcset="")
+          img(src=require("../../components/footer/img/logo-full.svg"), alt="", srcset="")
           p.footer__logo_text Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis.
         +footer-nav({data: footerUiOne})
         +footer-nav({data: footerUiTwo})
@@ -68,7 +68,7 @@ mixin footer(prop = {mode})
       .footer__content
        .footer__mini
           .footer__logo
-            img(src=require("../../components/footer/img/logo-footer.svg"), alt="", srcset="")
+            img(src=require("../../components/footer/img/logo-full.svg"), alt="", srcset="")
           p.footer__logo_text Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis.
           .footer__brand
             img(src=require("../../components/footer/img/brands/twitter.svg"), alt="twitter logo" class="footer__brand")

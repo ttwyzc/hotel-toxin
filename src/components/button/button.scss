@@ -31,7 +31,7 @@
 
       &:hover,
       &:focus {
-        background-image: linear-gradient(white, white), $primary-gradient;
+        background-image: linear-gradient(white, white), $primary-gradient-opac;
       }
     }
 
@@ -50,7 +50,7 @@
 
       &:hover,
       &:focus {
-        background-image: $primary-gradient;
+        background-image: $primary-gradient-opac;
       }
     }
 

@@ -2,14 +2,12 @@
   "name": "hotel-toxin",
   "version": "1.0.0",
   "description": "",
-  "main": "./src/entry.js",
+  "private": true,
   "scripts": {
-    "dev:colors": "parcel ./src/pages/colors-n-types/colors-n-types.pug",
-    "dev:forms": "parcel ./src/pages/form-elements/form-elements.pug",
-    "dev:headers": "parcel ./src/pages/headers-n-footers/headers-n-footers.pug",
-    "build:colors": "parcel build ./src/pages/colors-n-types/colors-n-types.pug",
-    "build:forms": "parcel build ./src/pages/form-elements/form-elements.pug",
-    "build:headers": "parcel build ./src/pages/headers-n-footers/headers-n-footers.pug"
+    "dev": "webpack --mode development",
+    "build": "webpack --mode production",
+    "watch": "webpack --mode development --watch",
+    "devserver": "webpack-dev-server --mode development --open"
   },
   "repository": {
     "type": "git",
@@ -23,8 +21,18 @@
   },
   "homepage": "https://github.com/ttwyzc/hotel-toxin#readme",
   "devDependencies": {
+    "clean-webpack-plugin": "^3.0.0",
+    "css-loader": "^3.4.2",
+    "file-loader": "^5.0.2",
+    "html-webpack-plugin": "^3.2.0",
+    "mini-css-extract-plugin": "^0.9.0",
     "node-sass": "^4.13.1",
-    "parcel-bundler": "^1.12.4",
-    "pug": "^2.0.4"
+    "pug": "^2.0.4",
+    "pug-loader": "^2.4.0",
+    "sass-loader": "^8.0.2",
+    "style-loader": "^1.1.3",
+    "webpack": "^4.41.5",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.10.1"
   }
 }

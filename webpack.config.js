@@ -4,19 +4,28 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
-  devtool: 'cheap-module-source-map',
+  devtool: 'eval',
   context: path.resolve(__dirname, 'src'),
   mode: 'development',
   entry: {
-    bundle: './entry.js',
+    app: './entry.js',
   },
   output: {
-    filename: '[name].js',
+    filename: '[name].bundle.js',
     path: path.resolve(__dirname, 'dist'),
+    pathinfo: false,
   },
   devServer: {
     port: 1234,
+    contentBase: './dist',
+    hot: true,
   },
+  optimization: {
+    removeAvailableModules: false,
+    removeEmptyChunks: false,
+    splitChunks: false,
+  },
+
   plugins: [
     new HTMLWebpackPlugin({
       filename: 'index.html',
@@ -30,10 +39,10 @@ module.exports = {
       filename: 'forms.html',
       template: 'pages/form-elements/form-elements.pug',
     }),
-    new CleanWebpackPlugin(),
     new MiniCssExtractPlugin({
       filename: '[name].css',
     }),
+    new CleanWebpackPlugin(),
   ],
   module: {
     rules: [
@@ -58,6 +67,7 @@ module.exports = {
         test: /\.(png|jpg|svg|ttf|eot|woff|woff2)$/,
         loader: 'file-loader',
         options: {
+          name: '[path][name].[ext]',
           esModule: false,
         },
       },

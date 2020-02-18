@@ -1,12 +1,14 @@
 extends ../base-min/base-min
-include ../../components/wrapper/wrapper
-include ../../components/button/button
-include ../../components/input/input
-include ../../components/bullet-list/bullet-list
-include ../../components/like/like
 
 
 block content
+  -
+    const bulletItems = [
+      'Нельзя с питомцами',
+      'Без вечеринок и мероприятий',
+      'Время прибытия — после 13:00, а выезд до 12:00',
+    ]
+
   +header({"mode": 'min'})
   .wrapper
     .wrapper__content
@@ -62,7 +64,7 @@ block content
                 })
 
           .form-elems__bullets
-            +bullet-list({items: bulletList})
+            +bullet-list({items: bulletItems})
           .form-elems__radio-group
             +input({type: 'radio', id: 'women', name: 'gender', label: 'Мужчина', isChecked: true})
             +input({type: 'radio', id: 'men', name: 'gender', label: 'Женщина'})

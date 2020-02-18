@@ -10,17 +10,46 @@ mixin footer-nav(links = {data})
 
 
 mixin footer(prop = {mode})
-  - const { mode='default' } = prop;
-  - const full = (mode === 'default') ? true : false;
+  -
+    const { mode='default' } = prop;
+    const full = (mode === 'default') ? true : false;
+    const footerUiOne = {
+      name: 'Navigation',
+      links: [
+        { title: 'About Us', link: '#' },
+        { title: 'News', link: '#' },
+        { title: 'Support', link: '#' },
+        { title: 'Products', link: '#' },
+      ],
+    }
+    const footerUiTwo = {
+        name: 'About Us',
+        links: [
+          { title: 'Who we are', link: '#' },
+          { title: 'Our team', link: '#' },
+          { title: 'Careers', link: '#' },
+          { title: 'Investors', link: '#' },
+        ],
+      }
+    const footerUiThree = {
+      name: 'Support',
+      links: [
+        { title: 'Documentation', link: '#' },
+        { title: 'Community', link: '#' },
+        { title: 'Get in Touch', link: '#' },
+      ],
+    }
+
+
   footer.footer
     if full
       .footer__content
         .footer__logo
-          img(src="../../components/footer/img/logo-full.svg", alt="", srcset="")
+          img(src=require("../../components/footer/img/logo-footer.svg"), alt="", srcset="")
           p.footer__logo_text Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis.
-        +footer-nav({data: footerUikitOne})
-        +footer-nav({data: footerUikitTwo})
-        +footer-nav({data: footerUikitThree})
+        +footer-nav({data: footerUiOne})
+        +footer-nav({data: footerUiTwo})
+        +footer-nav({data: footerUiThree})
         .footer__sub
           h3 Subscribe to our newsletter
           p.footer__sub_text Receive our latest news and promotions in your inbox!
@@ -32,16 +61,16 @@ mixin footer(prop = {mode})
       .footer__copyright
         p.footer__copyright_item Copyright &copy; 2018 Toxin UI Kit. All rights reserved.
         .footer__brands
-          img(src="../../components/footer/img/brands/twitter.svg", alt="twitter logo" class="footer__brand")
-          img(src="../../components/footer/img/brands/facebook.svg", alt="facebook logo" class="footer__brand")
-          img(src="../../components/footer/img/brands/instagram.svg", alt="instagram logo" class="footer__brand")
+          img(src=require("../../components/footer/img/brands/twitter.svg"), alt="twitter logo" class="footer__brand")
+          img(src=require("../../components/footer/img/brands/facebook.svg"), alt="facebook logo" class="footer__brand")
+          img(src=require("../../components/footer/img/brands/instagram.svg"), alt="instagram logo" class="footer__brand")
     else
       .footer__content
-        .footer__mini
+       .footer__mini
           .footer__logo
-            img(src="../../components/footer/img/logo-full.svg", alt="", srcset="")
+            img(src=require("../../components/footer/img/logo-footer.svg"), alt="", srcset="")
           p.footer__logo_text Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis.
           .footer__brand
-            img(src="../../components/footer/img/brands/twitter.svg", alt="twitter logo" class="footer__brand")
-            img(src="../../components/footer/img/brands/facebook.svg", alt="facebook logo" class="footer__brand")
-            img(src="../../components/footer/img/brands/instagram.svg", alt="instagram logo" class="footer__brand")
+            img(src=require("../../components/footer/img/brands/twitter.svg"), alt="twitter logo" class="footer__brand")
+            img(src=require("../../components/footer/img/brands/facebook.svg"), alt="facebook logo" class="footer__brand")
+            img(src=require("../../components/footer/img/brands/instagram.svg"), alt="instagram logo" class="footer__brand")

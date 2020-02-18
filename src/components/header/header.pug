@@ -20,7 +20,7 @@ mixin header(prop = {authorised, mode, menu})
     header.header
       .header__container
         .header__logo-box
-          img(src="../../components/header/img/logo-full.svg", alt="")
+          img(src=require('../../components/header/img/logo-full.svg'), alt="")
         nav.header__menu
           ul.menu
             each link in menu
@@ -52,5 +52,5 @@ mixin header(prop = {authorised, mode, menu})
     header.header-min
       .header-min__container
         .header-min__logo-box
-          img(src="../../components/header/img/logo.svg", alt="logo").header-min__logo
+          img(src=require('../../components/header/img/logo.svg'), alt="logo").header-min__logo
 

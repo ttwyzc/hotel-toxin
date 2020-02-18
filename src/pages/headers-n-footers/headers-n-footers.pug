@@ -1,18 +1,42 @@
 extends ../base-min/base-min
-include ../../components/header/header
-include ../../components/footer/footer
-include ../../components/wrapper/wrapper
-include ../../components/colors/colors
-include ../../components/text-type/text-type
 
 
 block content
+  -
+    const menuList = [
+      {
+        title: 'Home',
+        link: '#',
+        isActive: true,
+      },
+      {
+        title: 'About',
+        link: '#',
+      },
+      {
+        title: 'Services',
+        link: '#',
+      },
+      {
+        title: 'Careers',
+        link: '#',
+      },
+      {
+        title: 'News',
+        link: '#',
+      },
+      {
+        title: 'Documentation',
+        link: '#',
+      },
+    ]
+
   .wrapper__grey
     +header({mode: 'mini'})
     .headers-n-footers__header
-    +header({authorised: false, menu: menuUikit})
+    +header({authorised: false, menu: menuList})
     .headers-n-footers__free-space
-    +header({authorised: true, menu: menuUikit})
+    +header({authorised: true, menu: menuList})
     .headers-n-footers__free-space
     +footer({mode: 'default'})
     .headers-n-footers__free-space

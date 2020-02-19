@@ -14,14 +14,14 @@ include ../radio-button/radio-button
 include ../toggle-button/toggle-button
 
 mixin input(prop = {})
-  - const { title, placeholder='placeholder', type='text' } = prop;
+  - const { title, placeholder='placeholder', type='text', mask } = prop;
 
   .input
     if type === 'text' || type === 'password' || type === 'email'
       if title
         label.input__title()
           h3 #{title}
-          input.input(class='input__elem ' placeholder=placeholder type='text')
+          input.input(class='input__elem ' placeholder=placeholder type='text' data-mask=mask)
       else
         input.input(class='input__elem' type='text' placeholder=placeholder)
 

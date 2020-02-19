@@ -1,0 +1,26 @@
+mixin login-form(props = {})
+  form.login-form
+    .login-form__container
+      h1.login-form__title Войти
+      .login-form__input
+        +input({type: 'text', placeholder: 'Email'})
+      .login-form__input
+        +input({type: 'password', placeholder: 'Пароль'})
+      .login-form__button
+        +button({
+          theme: 'cover',
+          text: 'Войти',
+          isLink: false,
+          size: 'big',
+          arrow: true,
+          arrowColor: 'white'
+          })
+      .login-form__footer
+        p.login-form__text Нет аккаунта на Toxin?
+        .login-form__link
+          +button({
+            theme: 'border',
+            text: 'Создать',
+            isLink: false,
+            size: 'medium',
+            })

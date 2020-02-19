@@ -1,5 +1,6 @@
 .button {
   position: relative;
+
   &,
   &:link,
   &:visited {
@@ -11,17 +12,6 @@
     cursor: pointer;
     outline: none;
     word-wrap: none;
-  }
-  &__arrow {
-    position: absolute;
-    right: 0;
-    top: 0;
-    height: 44px;
-    width: 44px;
-    padding: 1rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
   }
 
   &_theme {

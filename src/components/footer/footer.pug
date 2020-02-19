@@ -53,10 +53,7 @@ mixin footer(prop = {mode})
         .footer__sub
           h3 Subscribe to our newsletter
           p.footer__sub_text Receive our latest news and promotions in your inbox!
-          .input-with-icon
-            +input({type: 'text', placeholder: 'Email'})
-            .icon
-              i.material-icons.gradient arrow_forward
+          +input({type: 'text', placeholder: 'Your email address', arrow: true, arrowColor: 'gradient'})
 
       .footer__copyright
         p.footer__copyright_item Copyright &copy; 2018 Toxin UI Kit. All rights reserved.

@@ -1,0 +1,6 @@
+mixin arrow(props = {})
+  -
+    const {color='white'} = props
+    let arrowColor = 'arrow__color--' + color
+  .arrow
+    i.material-icons(class=arrowColor) arrow_forward

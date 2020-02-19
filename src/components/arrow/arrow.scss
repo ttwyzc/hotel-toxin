@@ -1,0 +1,25 @@
+.arrow {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 44px;
+  width: 44px;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &__color {
+    &--white {
+      background: #fff;
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    &--gradient {
+      background: $primary-gradient;
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+}

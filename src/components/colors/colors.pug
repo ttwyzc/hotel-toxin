@@ -12,9 +12,9 @@
     })
 
 
-mixin color(prop = {title, hex, style, isShadowed})
+mixin color(props = {title, hex, style, isShadowed})
   -
-    const { title='title', hex='#hex', style='dark-100', isShadowed=false } = prop;
+    const { title='title', hex='#hex', style='dark-100', isShadowed=false } = props;
 
     let classes = '';
     classes += style ? ' color__box_' + style : '';

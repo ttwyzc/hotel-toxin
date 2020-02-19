@@ -5,8 +5,8 @@
     items: ['a', 'b', 'c']
     })
 
-mixin bullet-list(prop = {items})
-  - const { items=[] } = prop;
+mixin bullet-list(props = {items})
+  - const { items=[] } = props;
   ul.bullet-list
     each item in items
       li.bullet-list__item #{item}

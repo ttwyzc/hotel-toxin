@@ -9,9 +9,9 @@ mixin footer-nav(links = {data})
         a(href=link.link class="footer__nav_link")=link.title
 
 
-mixin footer(prop = {mode})
+mixin footer(props = {mode})
   -
-    const { mode='default' } = prop;
+    const { mode='default' } = props;
     const full = (mode === 'default') ? true : false;
     const footerUiOne = {
       name: 'Navigation',

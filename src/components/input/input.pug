@@ -13,8 +13,8 @@
 include ../radio-button/radio-button
 include ../toggle-button/toggle-button
 
-mixin input(prop = {})
-  - const { title, placeholder='placeholder', type='text', mask, arrow=false, arrowColor='gradient'} = prop;
+mixin input(props = {})
+  - const { title, placeholder='placeholder', type='text', mask, arrow=false, arrowColor='gradient'} = props;
 
   .input
     if type === 'text' || type === 'password' || type === 'email'
@@ -30,7 +30,7 @@ mixin input(prop = {})
       | pass
 
     if type === 'radio'
-      +radio-button(prop)
+      +radio-button(props)
 
     if type=== 'toggle'
-      +toggle-button(prop)
+      +toggle-button(props)

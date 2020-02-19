@@ -1,4 +1,4 @@
-.login-form {
+.signup-form {
   background: #ffffff;
   border: 1px solid rgba(0, 0, 0, 0.12);
   box-sizing: border-box;
@@ -8,6 +8,7 @@
   flex: 0 1 38rem;
   display: flex;
   justify-content: center;
+  align-items: center;
 
   &__container {
     width: 320px;
@@ -19,6 +20,19 @@
 
   &__input {
     margin: 1rem 0;
+  }
+
+  &__radio {
+    display: flex;
+    justify-content: start;
+  }
+
+  &__radio-box {
+    width: 40%;
+  }
+
+  &__section {
+    margin-top: 2rem;
   }
 
   &__button {

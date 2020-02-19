@@ -1,0 +1,42 @@
+mixin signup-form()
+  form.signup-form
+    .signup-form__container
+      h1.signup-form__title Регистрация аккаунта
+      .signup-form__input
+        +input({type: 'text', placeholder: 'Имя'})
+      .signup-form__input
+        +input({type: 'text', placeholder: 'Фамилия'})
+      .signup-form__radio
+        .signup-form__radio-box
+          +input({type: 'radio', id: 'women', name: 'gender', label: 'Мужчина', isChecked: true})
+        .signup-form__radio-box
+          +input({type: 'radio', id: 'men', name: 'gender', label: 'Женщина'})
+
+      .signup-form__section
+        +input({type: 'text', title: 'дата рождения', placeholder: 'ДД.ММ.ГГ', mask: '00.00.0000'})
+
+      .signup-form__section
+        .signup-form__input
+          +input({type: 'email', title: 'данные для входа в сервис', placeholder: 'Email'})
+        .signup-form__input
+          +input({type: 'password', placeholder: 'Пароль'})
+        .signup-form__toggle
+          +input({type: 'toggle', label: 'Получать спецпредложения'})
+      .signup-form__button
+        +button({
+          theme: 'cover',
+          text: 'Войти',
+          isLink: false,
+          size: 'big',
+          arrow: true,
+          arrowColor: 'white'
+          })
+      .signup-form__footer
+        p.signup-form__text Уже есть аккаунт на Toxin
+        .signup-form__link
+          +button({
+            theme: 'border',
+            text: 'Войти',
+            isLink: false,
+            size: 'medium',
+            })

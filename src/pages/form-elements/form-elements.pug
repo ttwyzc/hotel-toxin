@@ -62,7 +62,13 @@ block content
                 color: 'grey',
                 isLink: true
                 })
-
+              +button({
+                theme: 'cover',
+                text: 'click me',
+                isLink: false,
+                size: 'big',
+                arrow: true
+                })
           .form-elems__bullets
             +bullet-list({items: bulletItems})
           .form-elems__radio-group

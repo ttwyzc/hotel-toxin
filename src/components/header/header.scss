@@ -38,21 +38,34 @@
   &__item {
     float: left;
     color: white;
-    text-align: center;
+    display: flex;
+    align-items: center;
     margin-right: 3rem;
     text-decoration: none;
+    position: relative;
   }
 
   &__link {
     font-family: Montserrat;
     font-style: normal;
     font-weight: normal;
-    color: rgba(31, 32, 65, 0.5);
+    color: $dark-50;
     text-decoration: none;
 
     &_active {
+      color: $dark-75;
       font-weight: bold;
     }
+  }
+
+  &__expandable-marker {
+    font-family: 'Material Icons';
+    font-size: 2.4rem;
+    line-height: 2rem;
+    display: inline-block;
+    color: $dark-50;
+    position: absolute;
+    right: -23px;
   }
 }
 .auth {

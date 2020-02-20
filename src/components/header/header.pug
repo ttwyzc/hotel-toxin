@@ -29,6 +29,8 @@ mixin header(props = {authorised, mode, menu})
                   a(href=link.link class="menu__link menu__link_active")=link.title
                 else
                   a(href=link.link class="menu__link")=link.title
+                if link.expandable
+                  span.menu__expandable-marker expand_more
           .auth
             if authorised
               .header__line

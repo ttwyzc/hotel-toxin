@@ -9,6 +9,8 @@ block content
       'Время прибытия — после 13:00, а выезд до 12:00',
     ]
 
+    const checkboxItems = [{title: 'Можно курить'}, {title: 'Можно с питомцами', isChecked: true}, {title: 'Можно пригласить гостей (до 10 человек)', isChecked: true}]
+
   +header({"mode": 'min'})
   .wrapper
     .wrapper__content
@@ -20,56 +22,50 @@ block content
             +input({type: 'dropdown', title: 'Dropdown', placeholder: 'Сколько гостей'})
             +input({type: 'text', title: 'Masked text field', placeholder: 'ДД.ММ.ГГ', mask: '00.00.0000'})
           .form-elems__buttons
-
-              +button({
-                theme: 'cover',
-                text: 'click me',
-                isLink: false,
-                size: 'medium'
-                })
-
-              +button({
-                theme: 'cover',
-                text: 'click me',
-                isLink: false,
-                size: 'medium'
-                })
-
-              +button({
-                theme: 'border',
-                text: 'click me',
-                isLink: false,
-                size: 'medium'
-                })
-
-              +button({
-                theme: 'border',
-                text: 'click me',
-                isLink: false,
-                size: 'medium'
-                })
-
-              +button({
-                theme: 'text',
-                text: 'click me',
-                color: 'purple',
-                isLink: true
-                })
-
-              +button({
-                theme: 'text',
-                text: 'click me',
-                color: 'grey',
-                isLink: true
-                })
-              +button({
-                theme: 'cover',
-                text: 'click me',
-                isLink: false,
-                size: 'big',
-                arrow: true,
-                arrowColor: 'white'
-                })
+            +button({
+              theme: 'cover',
+              text: 'click me',
+              isLink: false,
+              size: 'medium'
+              })
+            +button({
+              theme: 'cover',
+              text: 'click me',
+              isLink: false,
+              size: 'medium'
+              })
+            +button({
+              theme: 'border',
+              text: 'click me',
+              isLink: false,
+              size: 'medium'
+              })
+            +button({
+              theme: 'border',
+              text: 'click me',
+              isLink: false,
+              size: 'medium'
+              })
+            +button({
+              theme: 'text',
+              text: 'click me',
+              color: 'purple',
+              isLink: true
+              })
+            +button({
+              theme: 'text',
+              text: 'click me',
+              color: 'grey',
+              isLink: true
+              })
+            +button({
+              theme: 'cover',
+              text: 'click me',
+              isLink: false,
+              size: 'big',
+              arrow: true,
+              arrowColor: 'white'
+              })
           .form-elems__bullets
             +bullet-list({items: bulletItems})
           .form-elems__radio-group
@@ -79,4 +75,7 @@ block content
             +input({type: 'toggle', label: 'Подписаться на новости'})
             +input({type: 'toggle', label: 'Подписаться на новости', isChecked: true})
           .form-elems__likes
-            +like()
+            +like({count: 2})
+            +like({count: 12, isChecked: true})
+          .form-elems__checkbox
+            +checkbox({items: checkboxItems})

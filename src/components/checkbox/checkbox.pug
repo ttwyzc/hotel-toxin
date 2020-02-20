@@ -1,0 +1,8 @@
+mixin checkbox(props = {items})
+  - const {items} = props
+
+  each item in items
+    label.checkbox
+      input(type="checkbox" checked=item.isChecked).checkbox__input
+      span.checkbox__mark
+      p.chekbox__label #{item.title}

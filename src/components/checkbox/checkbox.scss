@@ -1,0 +1,51 @@
+.checkbox {
+  display: flex;
+  position: relative;
+  padding-left: 3rem;
+  cursor: pointer;
+  line-height: 1.8rem;
+
+  &:not(:last-child) {
+    margin-bottom: 1rem;
+  }
+  &__input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+
+  &__mark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 2rem;
+    width: 2rem;
+    background-color: white;
+    border: 1px solid $dark-25;
+    border-radius: 4px;
+  }
+  &__mark::after {
+    content: '';
+    position: absolute;
+    display: none;
+    top: 4px;
+    left: 6px;
+    width: 6px;
+    height: 8px;
+    border: solid;
+    border-image: $primary-gradient;
+    border-image-slice: 1;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+  }
+
+  &__input:checked ~ &__mark {
+    border: 1px solid $purple;
+  }
+
+  &__input:checked ~ &__mark::after {
+    display: block;
+  }
+}

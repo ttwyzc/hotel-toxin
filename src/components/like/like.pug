@@ -1,2 +1,11 @@
-mixin like()
-  pass
+//-
+  comment
+
+mixin like(props = {})
+  - const { count = 0, isChecked = false } = props;
+  .like
+    label.like__like-label
+      input.like__like-input(type='checkbox' checked=isChecked)
+      span.like__like-button
+        span.like__like-icon.material__icon
+        span.like__like-text #{count}

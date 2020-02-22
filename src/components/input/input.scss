@@ -7,9 +7,9 @@
   }
 
   &__elem {
-    font-size: 14px;
-    line-height: 18px;
-    padding: 13px 15px;
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    padding: 1.3rem 1.5rem;
     border: 1px solid $dark-25;
     border-radius: 4px;
     color: $dark-75;
@@ -32,5 +32,5 @@
 .input__title,
 .input__elem {
   display: block;
-  margin: 5px 0px;
+  margin: 0.5rem 0px;
 }

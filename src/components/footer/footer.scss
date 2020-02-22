@@ -4,11 +4,11 @@
   &__content {
     display: flex;
     justify-content: space-between;
-    max-width: 1160px;
+    max-width: 116rem;
     margin: 0 auto;
-    box-shadow: 0px 1px 0px rgba(31, 32, 65, 0.1);
+    box-shadow: 0 1px 0px rgba(31, 32, 65, 0.1);
     align-items: flex-start;
-    padding: 100px 0px;
+    padding: 10rem 0;
   }
 
   &__mini {
@@ -18,23 +18,23 @@
     margin: 0 auto;
     text-align: center;
     align-items: center;
-    max-width: 560px;
+    max-width: 56rem;
   }
 
   &__logo {
-    max-width: 260px;
+    max-width: 26rem;
     color: $dark-75;
 
     &_text {
-      padding-top: 10px;
+      padding-top: 1rem;
     }
   }
 
   &__sub {
-    max-width: 260px;
+    max-width: 26rem;
 
     &_text {
-      margin: 20px 0;
+      margin: 2rem 0;
       color: $dark-75;
     }
   }
@@ -42,14 +42,14 @@
   &__copyright {
     display: flex;
     align-items: center;
-    height: 70px;
+    height: 7rem;
     justify-content: space-between;
     max-width: 116rem;
     margin: 0 auto;
 
     &_item {
-      font-size: 14px;
-      line-height: 17px;
+      font-size: 1.4rem;
+      line-height: 1.7rem;
       color: $dark-75;
     }
   }
@@ -67,11 +67,11 @@
     list-style: none;
 
     &_item {
-      margin-top: 16px;
+      margin-top: 1.6rem;
     }
 
     &_link {
-      font-size: 14px;
+      font-size: 1.4rem;
       color: $dark-50;
       text-decoration: none;
     }

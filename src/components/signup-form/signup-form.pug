@@ -8,16 +8,20 @@ mixin signup-form()
         +input({type: 'text', placeholder: 'Фамилия'})
       .signup-form__radio
         .signup-form__radio-box
-          +input({type: 'radio', id: 'women', name: 'gender', label: 'Мужчина', isChecked: true})
+          +input({type: 'radio', id: 'women', name: 'gender',
+            label: 'Мужчина', isChecked: true})
         .signup-form__radio-box
-          +input({type: 'radio', id: 'men', name: 'gender', label: 'Женщина'})
+          +input({type: 'radio', id: 'men', name: 'gender',
+            label: 'Женщина'})
 
       .signup-form__section
-        +input({type: 'text', title: 'дата рождения', placeholder: 'ДД.ММ.ГГ', mask: '00.00.0000'})
+        +input({type: 'text', title: 'дата рождения',
+          placeholder: 'ДД.ММ.ГГ', mask: '00.00.0000'})
 
       .signup-form__section
         .signup-form__input
-          +input({type: 'email', title: 'данные для входа в сервис', placeholder: 'Email'})
+          +input({type: 'email', title: 'данные для входа в сервис',
+            placeholder: 'Email'})
         .signup-form__input
           +input({type: 'password', placeholder: 'Пароль'})
         .signup-form__toggle

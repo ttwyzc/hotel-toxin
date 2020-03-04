@@ -1,7 +1,17 @@
 # Hotel toxin
 
-npm i
+Clone git repository
 
-npm run build
+`git clone https://github.com/ttwyzc/hotel-toxin.git`
 
-npm run devserver
+Install dependencies:
+
+`npm i`
+
+Build project:
+
+`npm run build`
+
+Run project on local machine with dev server:
+
+`npm run devserver`

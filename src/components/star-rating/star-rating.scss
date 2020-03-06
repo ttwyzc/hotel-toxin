@@ -1,0 +1,13 @@
+.star-rating {
+  display: flex;
+  color: $primary-gradient;
+  background-image: $primary-gradient;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  &__star {
+    font-family: 'Material Icons';
+    font-size: 24px;
+    line-height: 20px;
+  }
+}

@@ -1,0 +1,12 @@
+mixin star-rating(props = {count})
+  -
+    const {count} = props;
+    let i = 0;
+
+  .star-rating
+    while i < 5
+      if(count > i)
+        .star-rating__star star
+      else
+        .star-rating__star star_border
+      - i++;

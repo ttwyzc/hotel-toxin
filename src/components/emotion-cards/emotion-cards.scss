@@ -1,0 +1,35 @@
+.emotion-cards {
+  &__card {
+    display: flex;
+  }
+
+  &__icon {
+    font-family: 'Material Icons';
+    font-size: 48px;
+    line-height: 41px;
+    color: $primary-gradient;
+    background-image: $primary-gradient;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  &__description {
+    margin-left: 1rem;
+  }
+
+  &__title {
+    font-weight: bold;
+    color: $dark-75;
+  }
+
+  &__text {
+    color: $dark-75;
+  }
+
+  &__divider {
+    margin: 2rem 0;
+    height: 1px;
+    background-color: rgba($dark-100, 0.1);
+  }
+}

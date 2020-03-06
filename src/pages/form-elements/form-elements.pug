@@ -8,6 +8,7 @@ block content
       'Без вечеринок и мероприятий',
       'Время прибытия — после 13:00, а выезд до 12:00',
     ]
+    const emotionsListUikit = [{icon: 'insert_emoticon',title: 'Комфорт',text: 'Шумопоглощающие стены'}, {icon: 'location_city',title: 'Удобство',text: 'Окно в каждой из спален'}]
 
     const checkboxItems = [{title: 'Можно курить'}, {title: 'Можно с питомцами', isChecked: true}, {title: 'Можно пригласить гостей (до 10 человек)', isChecked: true}]
 
@@ -88,3 +89,5 @@ block content
           .form-elems__star-rating
             +star-rating({count: 4})
             +star-rating({count: 5})
+          .form-elems__emotions
+            +emotion-cards({emotions: emotionsListUikit})

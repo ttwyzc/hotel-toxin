@@ -1,0 +1,13 @@
+mixin emotion-cards(props = {emotions})
+  - const {emotions=[]} = props;
+  - const last = emotions[emotions.length - 1];
+
+  .emotion-cards
+    each emotion, index in emotions
+      .emotion-cards__card
+        .emotion-cards__icon #{emotion.icon}
+        .emotion-cards__description
+          .emotion-cards__title #{emotion.title}
+          .emotion-cards__text #{emotion.text}
+      if index < emotions.length -1
+        .emotion-cards__divider

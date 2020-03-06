@@ -1,8 +1,18 @@
-mixin checkbox(props = {items})
-  - const {items} = props
+mixin checkbox(props = {items, isRich})
+  - const {items=[], isRich=false} = props
 
-  each item in items
-    label.checkbox
-      input(type="checkbox" checked=item.isChecked).checkbox__input
-      span.checkbox__mark
-      p.chekbox__label #{item.title}
+  if isRich
+    each item in items
+      label.checkbox
+        input(type="checkbox" checked=item.isChecked).checkbox__input
+        span.checkbox__mark
+        .checkbox__rich
+          h3.checkbox__rich-title #{item.title}
+          p.checkbox__rich-text #{item.text}
+
+  else
+    each item in items
+      label.checkbox
+        input(type="checkbox" checked=item.isChecked).checkbox__input
+        span.checkbox__mark
+        p.chekbox__label #{item.title}

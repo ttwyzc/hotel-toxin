@@ -48,4 +48,14 @@
   &__input:checked ~ &__mark::after {
     display: block;
   }
+
+  &__rich-title {
+    color: $dark-75;
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+  }
+
+  &__rich-text {
+    font-size: 1.2rem;
+  }
 }

@@ -1,0 +1,40 @@
+.expandable {
+  &__input {
+    display: none;
+  }
+  &__label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+  }
+  &__icon {
+    height: 4.8rem;
+    width: 4.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__icon::after {
+    content: 'expand_more';
+    font-family: Material Icons;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 24px;
+  }
+
+  &__content {
+    max-height: 0px;
+    overflow: hidden;
+  }
+
+  &__input:checked ~ &__label &__icon {
+    transform: rotate(-180deg);
+  }
+
+  &__input:checked + &__label + &__content {
+    max-height: 100%;
+  }
+}

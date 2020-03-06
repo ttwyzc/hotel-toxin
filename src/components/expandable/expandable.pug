@@ -1,0 +1,9 @@
+mixin expandable(props = {title})
+  - const {title='title'} = props;
+  .expandable
+    input(type="checkbox" id="expandable-toggle").expandable__input
+    label(for="expandable-toggle").expandable__label
+      h3.expandable__title #{title}
+      .expandable__icon
+    .expandable__content
+      block

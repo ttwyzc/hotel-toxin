@@ -89,5 +89,9 @@ block content
           .form-elems__star-rating
             +star-rating({count: 4})
             +star-rating({count: 5})
+          .form-elems__expandable
+            +expandable({title: 'expandable checkbox list'})
+              +checkbox({items: checkboxItems})
           .form-elems__emotions
             +emotion-cards({emotions: emotionsListUikit})
+

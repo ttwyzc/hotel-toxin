@@ -17,6 +17,24 @@
 }
 
 @font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/open-sans-v17-latin_cyrillic-regular.woff') format('woff'),
+    url('../fonts/open-sans-v17-latin_cyrillic-regular.ttf') format('truetype'),
+    url('../fonts/open-sans-v17-latin_cyrillic-regular.svg#OpenSans') format('svg');
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../fonts/open-sans-v17-latin_cyrillic-700.svg') format('woff'),
+    url('../fonts/open-sans-v17-latin_cyrillic-700.svg') format('truetype'),
+    url('../fonts/open-sans-v17-latin_cyrillic-700.svg#OpenSans') format('svg');
+}
+
+@font-face {
   font-family: Montserrat;
   font-style: normal;
   font-weight: normal;

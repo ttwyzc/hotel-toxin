@@ -1,0 +1,25 @@
+.brands {
+  font-family: 'Font Awesome 5 Brands';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 2.4rem;
+  // line-height: 23px;
+  &__elem {
+    background: $primary-gradient;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    &:not(:last-child) {
+      margin-right: 2rem;
+    }
+    &--fb::before {
+      content: '\f082';
+    }
+    &--tw::before {
+      content: '\f099';
+    }
+    &--inst::before {
+      content: '\f16d';
+    }
+  }
+}

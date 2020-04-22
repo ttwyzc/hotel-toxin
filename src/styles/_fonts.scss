@@ -8,6 +8,15 @@
 }
 
 @font-face {
+  font-family: 'Font Awesome 5 Brands';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/fa-brands-400.woff') format('woff'),
+    url('../fonts/fa-brands-400.ttf') format('truetype'),
+    url('../fonts/fa-brands-400.svg#fontawesome') format('svg');
+}
+
+@font-face {
   font-family: Quicksand;
   font-style: normal;
   font-weight: 700;
@@ -17,7 +26,7 @@
 }
 
 @font-face {
-  font-family: 'Open Sans';
+  font-family: OpenSans;
   font-style: normal;
   font-weight: 400;
   src: url('../fonts/open-sans-v17-latin_cyrillic-regular.woff') format('woff'),
@@ -26,7 +35,7 @@
 }
 
 @font-face {
-  font-family: 'Open Sans';
+  font-family: OpenSans;
   font-style: normal;
   font-weight: 700;
   src: url('../fonts/open-sans-v17-latin_cyrillic-700.svg') format('woff'),

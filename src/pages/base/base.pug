@@ -1,0 +1,83 @@
+include ../../components/header/header
+include ../../components/footer/footer
+
+<!DOCTYPE html>
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Title
+  body
+    -
+      const headerMenu = [
+        {
+          title: 'О нас',
+          link: '#',
+        },
+        {
+          title: 'Услуги',
+          link: '#',
+          expandable: true,
+
+        },
+        {
+          title: 'Вакансии',
+          link: '#',
+        },
+        {
+          title: 'Новости',
+          link: '#',
+        },
+        {
+          title: 'Соглашения',
+          link: '#',
+        },
+      ]
+
+      const footerOne = {
+        name: 'навигация',
+        links: [
+          { title: 'О нас', link: '#' },
+          { title: 'Новости', link: '#' },
+          { title: 'Служба поддержки', link: '#' },
+          { title: 'Услуги', link: '#' },
+        ],
+      };
+
+      const footerTwo = {
+        name: 'о нас',
+        links: [
+          { title: 'О сервисе', link: '#' },
+          { title: 'Наша команда', link: '#' },
+          { title: 'Вакансии', link: '#' },
+          { title: 'Инвесторы', link: '#' },
+        ],
+      };
+
+      const footerThree = {
+        name: 'Служба поддержки',
+        links: [
+          { title: 'Соглашения', link: '#' },
+          { title: 'Сообщества', link: '#' },
+          { title: 'Связь с нами', link: '#' },
+        ],
+      };
+
+    .base
+      .base__header
+        block header
+          +header({authorised: false, menu: headerMenu})
+      .base__content
+        block content
+      .base__foter
+        block footer
+          +footer({
+            mode: 'default',
+            logoText: 'Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»',
+            navOne: footerOne,
+            navTwo: footerTwo,
+            navThree: footerThree,
+            subTitle: 'Подписка',
+            subText: 'Получайте специальные предложения и новости сервиса',
+            copyText: 'Copyright © 2018 Toxin отель. Все права зачищены.'
+          })

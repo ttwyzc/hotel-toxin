@@ -1,0 +1,91 @@
+mixin dropdown()
+  .l-container
+    h2 Item Quantity Dropdown Demo
+    h3 No config options
+    .no-config.iqdropdown
+      p.iqdropdown-selection
+      .iqdropdown-menu
+        .iqdropdown-menu-option(data-id='item1')
+          div
+            p.iqdropdown-item Item 1
+            p.iqdropdown-description A short description
+        .iqdropdown-menu-option(data-id='item2')
+          div
+            p.iqdropdown-item Item 2
+            p.iqdropdown-description A short description
+        .iqdropdown-menu-option(data-id='item3')
+          div
+            p.iqdropdown-item Item 3
+            p.iqdropdown-description A short description
+        .iqdropdown-menu-option(data-id='item4')
+          div
+            p.iqdropdown-item Item 4
+            p.iqdropdown-description A short description
+        .iqdropdown-menu-option(data-id='item5')
+          div
+            p.iqdropdown-item Item 5
+            p.iqdropdown-description A short description
+    h3 No config options with custom selection message
+    .no-config.iqdropdown
+      p.iqdropdown-selection(data-selection-text='passenger' data-text-plural='passengers')
+      .iqdropdown-menu
+        .iqdropdown-menu-option(data-id='adult' data-defaultcount='1' data-mincount='1')
+          div
+            p.iqdropdown-item Adults
+            p.iqdropdown-description 12+ years
+        .iqdropdown-menu-option(data-id='minor' data-defaultcount='0' data-mincount='0')
+          div
+            p.iqdropdown-item Children
+            p.iqdropdown-description 2 - 11 years
+        .iqdropdown-menu-option(data-id='infant')
+          div
+            p.iqdropdown-item Infants
+            p.iqdropdown-description 2 years
+    h3 Custom config
+    .custom.iqdropdown
+      p.iqdropdown-selection
+      .iqdropdown-menu
+        .iqdropdown-menu-option(data-id='adult' data-defaultcount='1' data-mincount='1')
+          div
+            p.iqdropdown-item Adults
+            p.iqdropdown-description 12+ years
+        .iqdropdown-menu-option(data-id='minor' data-defaultcount='0' data-mincount='0')
+          div
+            p.iqdropdown-item Children
+            p.iqdropdown-description 2 - 11 years
+        .iqdropdown-menu-option(data-id='infant')
+          div
+            p.iqdropdown-item Infants
+            p.iqdropdown-description 2 years
+        button.iqdropdown-menu-close
+          | Cerrar
+    h3 Custom config (2nd instance)
+    .custom.iqdropdown
+      p.iqdropdown-selection
+      .iqdropdown-menu
+        .iqdropdown-menu-option(data-id='adult' data-defaultcount='1' data-mincount='1')
+          div
+            p.iqdropdown-item Adults
+            p.iqdropdown-description 12+ years
+        .iqdropdown-menu-option(data-id='minor' data-defaultcount='0' data-mincount='0')
+          div
+            p.iqdropdown-item Children
+            p.iqdropdown-description 2 - 11 years
+        .iqdropdown-menu-option(data-id='infant')
+          div
+            p.iqdropdown-item Infants
+            p.iqdropdown-description 2 years
+        button.iqdropdown-menu-close
+          | Cerrar
+    h3 Custom message
+    .custom-message.iqdropdown
+      p.iqdropdown-selection
+      .iqdropdown-menu
+        .iqdropdown-menu-option(data-id='item-a' data-defaultcount='0' data-mincount='0' data-maxcount='5')
+          div
+            p.iqdropdown-item Item A
+        .iqdropdown-menu-option(data-id='item-b' data-defaultcount='0' data-mincount='0' data-maxcount='5')
+          div
+            p.iqdropdown-item Item B
+        button.iqdropdown-menu-close
+          | Cerrar

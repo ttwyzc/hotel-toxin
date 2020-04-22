@@ -32,21 +32,25 @@ module.exports = {
       jQuery: 'jquery',
     }),
     new HTMLWebpackPlugin({
+      filename: 'login.html',
+      template: 'pages/login/login.pug',
+    }),
+    new HTMLWebpackPlugin({
       filename: 'index.html',
       template: 'pages/colors-n-types/colors-n-types.pug',
     }),
-    new HTMLWebpackPlugin({
-      filename: 'headers.html',
-      template: 'pages/headers-n-footers/headers-n-footers.pug',
-    }),
-    new HTMLWebpackPlugin({
-      filename: 'forms.html',
-      template: 'pages/form-elements/form-elements.pug',
-    }),
-    new HTMLWebpackPlugin({
-      filename: 'cards.html',
-      template: 'pages/cards/cards.pug',
-    }),
+    // new HTMLWebpackPlugin({
+    //   filename: 'headers.html',
+    //   template: 'pages/headers-n-footers/headers-n-footers.pug',
+    // }),
+    // new HTMLWebpackPlugin({
+    //   filename: 'forms.html',
+    //   template: 'pages/form-elements/form-elements.pug',
+    // }),
+    // new HTMLWebpackPlugin({
+    //   filename: 'cards.html',
+    //   template: 'pages/cards/cards.pug',
+    // }),
     new MiniCssExtractPlugin({
       filename: '[name].css',
     }),

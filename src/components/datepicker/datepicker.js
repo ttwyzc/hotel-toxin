@@ -11,13 +11,13 @@ $('.datepicker__elem').datepicker({
   clearButton: true,
   dateFormat: 'd M',
 });
-
-let a = document.querySelector('span[data-action="clear"]');
-a.classList.add('button', 'button_theme_text', 'button_theme_text--grey');
-
 const buttonsList = document.querySelector('.datepicker--buttons');
 const applyBtn = '<a class="button  button_theme_text button_theme_text--purple">Применить</a>';
-buttonsList.insertAdjacentHTML('beforeend', applyBtn);
+let a = document.querySelector('span[data-action="clear"]');
+try {
+  a.classList.add('button', 'button_theme_text', 'button_theme_text--grey');
+  buttonsList.insertAdjacentHTML('beforeend', applyBtn);
+} catch (error) {}
 
 const $start = $('.datepicker__start')
   .datepicker({

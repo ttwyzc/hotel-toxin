@@ -1,5 +1,6 @@
 extends ../base-min/base-min
 include ../../components/datepicker/datepicker
+include ../../components/dropdown/dropdown
 
 block content
   -
@@ -28,6 +29,9 @@ block content
             +datepicker({type: 'dropdown'})
           .form-elems__datepicker-filter
             +datepicker({type: 'filter'})
+
+          .form-elems__dropdown
+            +dropdown()
           .form-elems__buttons
             +button({
               theme: 'cover',

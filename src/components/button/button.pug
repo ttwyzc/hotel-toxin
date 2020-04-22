@@ -18,7 +18,7 @@ include ../arrow/arrow
 
 mixin button(props = {theme, color, isLink, text, arrowColor})
   -
-    const { theme='cover', color='', isLink=true, text='Button', size, arrow=false, arrowColor } = props;
+    const { theme='cover', color='', isLink=true, text='Button', size, isSubmit, arrow=false, arrowColor } = props;
 
     let classes = '';
     classes += theme ? ' button_theme_' + theme : '';
@@ -27,6 +27,6 @@ mixin button(props = {theme, color, isLink, text, arrowColor})
 
     const tag = isLink ? 'a' : 'button';
 
-  #{tag}.button(class=classes)= text
+  #{tag}.button(class=classes submit=isSubmit)= text
     if arrow === true
       +arrow({color: arrowColor})

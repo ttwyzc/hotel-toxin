@@ -12,9 +12,9 @@
 include ../button/button
 include ../logo/logo
 
-mixin header(props = {authorised, mode, menu})
+mixin header(props = {authorised, mode, menu, signupBtn, loginBtn})
   -
-    const { authorised = false, mode = 'default', menu = [] } = props;
+    const { authorised = false, mode = 'default', menu = [], signupBtn = 'зарегистрироваться',loginBtn = 'войти' } = props;
     const full = ( mode === 'default' ) ? true : false;
 
   if full
@@ -41,13 +41,13 @@ mixin header(props = {authorised, mode, menu})
               .header__buttons
                 +button({
                   theme: 'border',
-                  text: 'Login',
+                  text: loginBtn,
                   isLink: true,
                   size: 'small'
                   })
                 +button({
                   theme: 'cover',
-                  text: 'Register',
+                  text: signupBtn,
                   isLink: true,
                   size: 'small'
                   })

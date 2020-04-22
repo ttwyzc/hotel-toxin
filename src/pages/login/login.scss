@@ -1,0 +1,12 @@
+.login {
+  min-height: 68.4rem;
+  background-image: url('../../images/sign.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &__content {
+    max-width: 1160px;
+  }
+}

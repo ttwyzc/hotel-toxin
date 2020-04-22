@@ -32,6 +32,10 @@ module.exports = {
       jQuery: 'jquery',
     }),
     new HTMLWebpackPlugin({
+      filename: 'signup.html',
+      template: 'pages/registration/registration.pug',
+    }),
+    new HTMLWebpackPlugin({
       filename: 'login.html',
       template: 'pages/login/login.pug',
     }),

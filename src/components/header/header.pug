@@ -10,6 +10,7 @@
 
 
 include ../button/button
+include ../logo/logo
 
 mixin header(props = {authorised, mode, menu})
   -
@@ -20,7 +21,7 @@ mixin header(props = {authorised, mode, menu})
     header.header
       .header__container
         .header__logo-box
-          img(src=require('../../components/header/img/logo-full.svg'), alt="")
+          +logo()
         nav.header__menu
           ul.menu
             each link in menu
@@ -54,5 +55,5 @@ mixin header(props = {authorised, mode, menu})
     header.header-min
       .header-min__container
         .header-min__logo-box
-          img(src=require('../../components/header/img/logo.svg'), alt="logo").header-min__logo
+          +logo({type: 'mini'})
 

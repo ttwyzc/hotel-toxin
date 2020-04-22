@@ -1,0 +1,7 @@
+mixin logo(props ={ type })
+  - const { type='default' } = props
+
+  if (type === 'default')
+    img(src=require('../../components/logo/img/logo-full.svg'), alt="Toxin logo")
+  else if (type === 'mini')
+    img(src=require('../../components/logo/img/logo.svg'), alt="Toxin logo")

@@ -31,14 +31,51 @@ block content
         link: '#',
       },
     ]
+    const footerUikitOne = {
+      name: 'Navigation',
+      links: [
+        { title: 'About Us', link: '#' },
+        { title: 'News', link: '#' },
+        { title: 'Support', link: '#' },
+        { title: 'Products', link: '#' },
+      ],
+    };
+
+    const footerUikitTwo = {
+      name: 'About Us',
+      links: [
+        { title: 'Who we are', link: '#' },
+        { title: 'Our team', link: '#' },
+        { title: 'Careers', link: '#' },
+        { title: 'Investors', link: '#' },
+      ],
+    };
+
+    const footerUikitThree = {
+      name: 'Support',
+      links: [
+        { title: 'Documentation', link: '#' },
+        { title: 'Community', link: '#' },
+        { title: 'Get in Touch', link: '#' },
+      ],
+    };
 
   .wrapper__grey
     +header({mode: 'mini'})
     .headers-n-footers__header
-    +header({authorised: false, menu: menuList})
+    +header({authorised: false, menu: menuList, loginBtn: 'login', signupBtn: 'register'})
     .headers-n-footers__free-space
     +header({authorised: true, menu: menuList})
     .headers-n-footers__free-space
-    +footer({mode: 'default'})
+    +footer({
+      mode: 'default',
+      logoText: 'Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis.',
+      navOne: footerUikitOne,
+      navTwo: footerUikitTwo,
+      navThree: footerUikitThree,
+      subTitle: 'Subscribe to our newsletter',
+      subText: 'Receive our latest news and promotions in your inbox!',
+      copyText: 'Copyright © 2018 Toxin UI Kit. All rights reserved.'
+    })
     .headers-n-footers__free-space
     +footer({mode: 'mini'})

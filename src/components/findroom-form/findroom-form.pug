@@ -1,0 +1,21 @@
+include ../../components/datepicker/datepicker
+
+mixin findroom-form()
+  form.findroom
+    .findroom__container
+      h1.findroom__title Найдём номера под ваши пожелания
+
+      .findroom__dates
+        +datepicker({type: 'dropdown', placeholder: 'ДД.ММ.ГГГГ'})
+      .findroom__guests
+        // todo
+      .findroom__button
+        +button({
+          theme: 'cover',
+          text: 'подобрать номер',
+          isLink: false,
+          isSubmit: true,
+          size: 'big',
+          arrow: true,
+          arrowColor: 'white',
+          })

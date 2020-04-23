@@ -1,0 +1,29 @@
+.landing {
+  &__wrapper {
+    min-height: 83rem;
+    background-image: url('../../images/land.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+  }
+  &__content {
+    max-width: 116rem;
+    display: flex;
+    flex: 1 0;
+
+    margin: 0 auto;
+  }
+  &__form {
+    margin-top: 7rem;
+  }
+
+  &__caption {
+    max-width: 30rem;
+    text-align: right;
+    align-self: flex-end;
+    justify-self: flex-end;
+    margin-bottom: 2rem;
+    color: $dark-75;
+    margin-left: auto;
+  }
+}

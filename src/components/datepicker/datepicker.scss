@@ -1,5 +1,6 @@
 .datepicker-list {
   display: flex;
+  justify-content: space-between;
 }
 
 .datepicker__elem {
@@ -22,6 +23,18 @@
   &::placeholder {
     color: $dark-25;
   }
+
+  &--start {
+    max-width: 15rem;
+  }
+
+  &--end {
+    max-width: 15rem;
+  }
+}
+
+.datepicker__title {
+  margin-bottom: 0.5rem;
 }
 
 .datepicker__start {
@@ -54,6 +67,7 @@
   border-radius: 4px;
   color: $dark-75;
   font-style: normal;
+  max-width: 15rem;
 
   &:hover {
     border: 1px solid $dark-50;
@@ -376,13 +390,7 @@
 }
 
 .datepicker--pointer {
-  position: absolute;
-  background: #fff;
-  border-top: 1px solid #dbdbdb;
-  border-right: 1px solid #dbdbdb;
-  width: 10px;
-  height: 10px;
-  z-index: -1;
+  display: none;
 }
 .-top-left- .datepicker--pointer,
 .-top-center- .datepicker--pointer,

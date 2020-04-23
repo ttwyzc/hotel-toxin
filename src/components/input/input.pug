@@ -19,7 +19,7 @@ mixin input(props = {})
   .input
     if type === 'text' || type === 'password' || type === 'email'
       if title
-        label.input__title()
+        label.input__title
           h3 #{title}
           input.input(class='input__elem ' placeholder=placeholder type='text' data-mask=mask)
       else

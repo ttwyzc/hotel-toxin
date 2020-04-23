@@ -1,9 +1,22 @@
 mixin datepicker(props = { type, placeholder })
   - const {type, placeholder = 'ДД.ММ.ГГГГ'} = props
   if (type === 'filter')
-    input.input(class='datepicker__elem' type='text' placeholder=placeholder)
+    .datepicker__block
+      h3.datepicker__title даты пребывания в отеле
+      input.input(class='datepicker__elem' type='text' placeholder=placeholder)
   else if (type === 'dropdown')
     .datepicker-list
-      input.input(class='datepicker__start' type='text' placeholder=placeholder data-range="true" data-multiple-dates-separator=" - ")
-      input.input(class='datepicker__end' type='text' placeholder=placeholder)
+      .datepicker__block
+        h3.datepicker__title прибытие
+
+        input.input(
+          class='datepicker__elem datepicker__elem--start'
+          type='text'
+          placeholder=placeholder
+          data-range="true"
+          data-multiple-dates-separator=" - "
+        )
+      .datepicker__block
+        h3.datepicker__title выезд
+        input.input(class='datepicker__end datepicker__elem--end' type='text' placeholder=placeholder)
 

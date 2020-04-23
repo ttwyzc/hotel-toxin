@@ -8,8 +8,8 @@ $(document).ready(function () {
   $('.custom').iqDropdown({
     minItems: 1,
     maxItems: 5,
-    selectionText: 'passenger',
-    textPlural: 'passengers',
+    selectionText: 'гость',
+    textPlural: 'гостя',
     onChange: function (id, count, totalItems) {
       console.log(id, count, totalItems);
     },

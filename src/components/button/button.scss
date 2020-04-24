@@ -31,8 +31,7 @@
         padding: 1.2rem 1.8rem;
       }
 
-      &:hover,
-      &:focus {
+      &:hover {
         background-image: linear-gradient(white, white), $primary-gradient-opac;
       }
     }
@@ -55,8 +54,7 @@
         width: 100%;
       }
 
-      &:hover,
-      &:focus {
+      &:hover {
         background-image: $primary-gradient-opac;
       }
     }
@@ -72,8 +70,7 @@
         color: $purple;
       }
 
-      &:hover,
-      &:focus {
+      &:hover {
         opacity: 0.5;
       }
     }

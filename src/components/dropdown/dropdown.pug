@@ -1,50 +1,47 @@
 mixin dropdown()
   .l-container
-    //- h2 Item Quantity Dropdown Demo
-    h3 Custom config
-    .custom.iqdropdown
-      p.iqdropdown-selection
-      .iqdropdown-menu
-        .iqdropdown-menu-option(data-id='adult' data-defaultcount='1' data-mincount='1')
-          div
-            h3 взрослые
-            //- p.iqdropdown-description 12+ years
-        .iqdropdown-menu-option(data-id='minor' data-defaultcount='0' data-mincount='0')
-          div
-            h3 дети
-            //- p.iqdropdown-description 2 - 11 years
-        .iqdropdown-menu-option(data-id='infant')
-          div
-            h3 младенцы
-            //- p.iqdropdown-description 2 years
-        .iqdropdown__buttons
-          +button({
-              theme: 'text',
-              text: 'очистить',
-              color: 'grey',
-              isLink: true
-              })
-          +button({
-              theme: 'text',
-              text: 'применить',
-              color: 'purple',
-              isLink: true
-              })
+    //- //- h2 Item Quantity Dropdown Demo
+    //- h3 Custom config
+    //- .custom.iqdropdown
+    //-   p.iqdropdown-selection
+    //-   .iqdropdown-menu
+    //-     .iqdropdown-menu-option(data-id='adult' data-defaultcount='1' data-mincount='1')
+    //-       div
+    //-         h3 взрослые
+    //-         //- p.iqdropdown-description 12+ years
+    //-     .iqdropdown-menu-option(data-id='minor' data-defaultcount='0' data-mincount='0')
+    //-       div
+    //-         h3 дети
+    //-         //- p.iqdropdown-description 2 - 11 years
+    //-     .iqdropdown-menu-option(data-id='infant')
+    //-       div
+    //-         h3 младенцы
+    //-         //- p.iqdropdown-description 2 years
+    //-     .iqdropdown__buttons
+    //-       +button({
+    //-           theme: 'text',
+    //-           text: 'очистить',
+    //-           color: 'grey',
+    //-           isLink: true
+    //-           })
+    //-       +button({
+    //-           theme: 'text',
+    //-           text: 'применить',
+    //-           color: 'purple',
+    //-           isLink: true
+    //-           })
     h3 Custom config (2nd instance)
     .custom.iqdropdown
-      p.iqdropdown-selection
       .iqdropdown-menu
         .iqdropdown-menu-option(data-id='adult' data-defaultcount='1' data-mincount='1')
-          div
-            p.iqdropdown-item Adults
-            p.iqdropdown-description 12+ years
+           h3.iqdropdown__item Adults
         .iqdropdown-menu-option(data-id='minor' data-defaultcount='0' data-mincount='0')
-          div
-            p.iqdropdown-item Children
-            p.iqdropdown-description 2 - 11 years
+           h3.iqdropdown__item Children
         .iqdropdown-menu-option(data-id='infant')
-          div
-            p.iqdropdown-item Infants
-            p.iqdropdown-description 2 years
-        button.iqdropdown-menu-close
-          | Cerrar
+           h3.iqdropdown__item Infants
+        +button({
+            theme: 'text',
+            text: 'применить',
+            color: 'purple',
+            isLink: true
+            })

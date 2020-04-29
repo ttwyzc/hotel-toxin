@@ -1,5 +1,5 @@
 import 'item-quantity-dropdown/lib/item-quantity-dropdown.min.js';
-import 'item-quantity-dropdown/lib/item-quantity-dropdown.min.css';
+// import 'item-quantity-dropdown/lib/item-quantity-dropdown.min.css';
 import './dropdown.scss';
 
 $(document).ready(function () {
@@ -39,4 +39,7 @@ $(document).ready(function () {
       return items + ' = ' + totalItems;
     },
   });
+
+  const inc = document.querySelectorAll('i.icon-decrement.icon-increment');
+  inc.forEach((el) => el.classList.remove('icon-decrement'));
 });

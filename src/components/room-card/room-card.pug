@@ -1,0 +1,26 @@
+include ../../components/star-rating/star-rating
+
+mixin room-card(props = {})
+  - const {id, isLux= false,picture='room1', price, stars, reviewCount} = props
+  .room-card
+    .room-card__hero
+      img(src=require('../../images/rooms/' + picture + '.png'))
+    .room-card__info
+      .room-card__main
+        .room-card__main--text
+          h2.room-card__number
+            |№
+            span.room-card__number--id=id
+          if isLux === true
+            .room-card__lux
+              | Люкс
+        p.room-card__text
+          span.room-card__text--title=`${price} ₽ `
+          | в сутки
+      .room-card__review
+        .room-card__stars
+          +star-rating({count: stars})
+        .room-card__review-count
+          p.room-card__text
+            span.room-card__text--title=`${reviewCount} `
+            | Отзывов

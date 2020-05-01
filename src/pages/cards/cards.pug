@@ -1,5 +1,6 @@
 extends ../base-min/base-min
 include ../../components/findroom-form/findroom-form
+include ../../components/room-card/room-card
 
 block content
   .wrapper__grey
@@ -9,3 +10,11 @@ block content
         +login-form()
         +signup-form()
         +findroom-form()
+    +room-card({
+      id:888,
+      isLux: true,
+      picture: 'room1',
+      price: '9 990',
+      stars: 5,
+      reviewCount:145
+    })

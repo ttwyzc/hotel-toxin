@@ -1,6 +1,7 @@
 extends ../base-min/base-min
 include ../../components/datepicker/datepicker
 include ../../components/dropdown/dropdown
+include ../../components/slider/slider
 
 block content
   -
@@ -102,3 +103,5 @@ block content
               +checkbox({items: checkboxItems})
           .form-elems__emotions
             +emotion-cards({emotions: emotionsListUikit})
+          .form-elems__slider
+            +slider()
